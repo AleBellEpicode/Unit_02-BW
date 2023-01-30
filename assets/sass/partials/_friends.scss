@@ -1,0 +1,18 @@
+aside {
+  height: 100%;
+  width: 350px;
+  background-color: $bg-dark;
+  padding: 20px;
+  div.friendInfo {
+    margin-left: 10px;
+  }
+  span.friendTime,
+  div.friendSong,
+  div.friendAlbum {
+    font-size: 75%;
+    font-weight: 200;
+  }
+  div.friendName {
+    font-weight: 600;
+  }
+}

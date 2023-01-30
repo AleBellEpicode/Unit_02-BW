@@ -9,8 +9,10 @@ $bg-dark: #121212;
 body {
   background-color: black;
   color: white;
+  height: 100vh;
 }
 
 main {
   background-color: $bg-dark;
+  width: 100%;
 }

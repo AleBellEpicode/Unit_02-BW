@@ -139,8 +139,33 @@ table {
 body {
   background-color: black;
   color: white;
+  height: 100vh;
 }
 
 main {
   background-color: #121212;
+  width: 100%;
+}
+
+aside {
+  height: 100%;
+  width: 350px;
+  background-color: #121212;
+  padding: 20px;
+}
+aside div.friendInfo {
+  margin-left: 10px;
+}
+aside span.friendTime,
+aside div.friendSong,
+aside div.friendAlbum {
+  font-size: 75%;
+  font-weight: 200;
+}
+aside div.friendName {
+  font-weight: 600;
+}
+
+navbar {
+  width: 350px;
 }/*# sourceMappingURL=app.css.map */
