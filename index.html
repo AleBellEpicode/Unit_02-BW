@@ -24,17 +24,17 @@
     </div>
     <ul>
       <li>
-          <a href="#">
-            <i class="bi bi-house-door-fill"></i>
-            <span>Home</span>
-          </a>
+        <a href="#">
+          <i class="bi bi-house-door-fill"></i>
+          <span>Home</span>
+        </a>
       </li>
       <li>
-          <a href="#">
-            <i class="bi bi-search"></i>
-            <span>Cerca</span>
-          </a>
-        </li>
+        <a href="#">
+          <i class="bi bi-search"></i>
+          <span>Cerca</span>
+        </a>
+      </li>
       <li>
         <a href="#">
           <i class="bi bi-collection"></i>
@@ -42,35 +42,35 @@
         </a>
       </li>
     </ul>
-  <div class="playlist">
-    <ul>
-      <li>
-        <a href="#">
-          <i class="bi bi-plus"></i>
-          <span>Crea playlist</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-box2-heart"></i>
+    <div class="playlist">
+      <ul>
+        <li>
+          <a href="#">
+            <i class="bi bi-plus"></i>
+            <span>Crea playlist</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-box2-heart"></i>
             <span>Brani che ti piacciono</span>
           </a>
-      </li>
-    </ul>
-  </div>
-  
-  </div>
-  <div class="links">
-    <ul>
-      <li><a href="#"></a>Informazioni legali</li>
-      <li><a href="#"></a>Centro sulla privacy</li>
-      <li><a href="#"></a>Informativa sulla privacy</li>
-      <li><a href="#"></a>Impostazioni cookie</li>
-      <li><a href="#"></a>Info annunci</li>
-      <li><a href="#"></a>Politica sui cookie</li>
-    </ul>
-  </div>
- </navbar>
+        </li>
+      </ul>
+    </div>
+
+    </div>
+    <div class="links">
+      <ul>
+        <li><a href="#"></a>Informazioni legali</li>
+        <li><a href="#"></a>Centro sulla privacy</li>
+        <li><a href="#"></a>Informativa sulla privacy</li>
+        <li><a href="#"></a>Impostazioni cookie</li>
+        <li><a href="#"></a>Info annunci</li>
+        <li><a href="#"></a>Politica sui cookie</li>
+      </ul>
+    </div>
+  </navbar>
 
   <main class="container-fluid">
     <div class="d-flex justify-content-between mt-4 mb-5">
@@ -82,19 +82,38 @@
           &#62;
         </button>
       </div>
-      <div class="card container-fluid flex-row" id="showcase-card">
-        <img class="card-img rounded-0 mt-2 showcase-img" src="https://placekitten.com/200/300" alt="Card image cap" />
-        <div class="card-body">
-          <h1 class="card-title">Card title (feat. title)</h1>
-          <div class="card-text mb-3">
-            titolo artista/i
-            <br />
-            <p class="mt-3">ascolta il nuovo singolo di</p>
-          </div>
-          <a href="#" class="btn btn-play mt-2 rounded-pill">Go somewhere</a>
-          <a href="#" class="btn btn-save mt-2 text-white border border-opacity-10 ms-2 rounded-pill">Go somewhere</a>
-          <a href="#" class="dropdown ms-2">. . .</a>
+      <span class="rounded-pill account-pill text-white border border-0 dropdown p-2">
+        <a href="#" class="text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" role="button"
+          aria-expanded="false"><img src="" />Nautilus`s Hook ...</a>
+      </span>
+    </div>
+    <div class="card container-fluid flex-row border border-0" id="showcase-card">
+      <img class="card-img rounded-0 p-2 showcase-img" src="https://placekitten.com/200/300" alt="Card image cap" />
+      <div class="card-body">
+        <h1 class="card-title">Card title (feat. title)</h1>
+        <div class="card-text mb-3">
+          titolo artista/i
+          <br />
+          <p class="mt-3">ascolta il nuovo singolo di</p>
         </div>
+        <a href="#" class="btn btn-play mt-2 rounded-pill showcase-pills">Play</a>
+        <a href="#"
+          class="btn btn-save mt-2 text-white border border-opacity-10 ms-2 rounded-pill showcase-pills">Salva</a>
+        <span class="dropdown">
+          <a href="#" class="ms-2 text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" role="button"
+            aria-expanded="false">. . .</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item text-white" href="#scrollspyHeading3">Add to que</a>
+            </li>
+            <li>
+              <a class="dropdown-item text-white" href="#scrollspyHeading4">Download</a>
+            </li>
+            <li>
+              <a class="dropdown-item text-white" href="#scrollspyHeading5">Add to playlist</a>
+            </li>
+          </ul>
+        </span>
       </div>
     </div>
     <h1 class="fs-1 mt-3">Buonasera</h1>
