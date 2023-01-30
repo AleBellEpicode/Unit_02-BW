@@ -1,70 +1,82 @@
 
 navbar{
   background-color: black;
-  // display: flex;
+  display: flex;
   flex-direction: column;
-
-  min-width: 300px;
+  min-width: 241px;
   height: 100%;
   margin: 0;
   padding: 0;
   .logo{
-      color:white;
-      margin-bottom: 18px;
-      padding-right: 24px;
-      padding-left: 24px;
-      padding-top: 24px;
-      .spotylogo{
-          height: 40px;
-          max-width: 131px;
-          width: 100%;
-      }
+    color:white;
+    margin-bottom: 18px;
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 24px;
+    .spotylogo{
+      height: 40px;
+      max-width: 131px;
+      width: 100%;
+    }
   }
   ul{
+    list-style: none;
+    padding: 0;
+    li{
+      padding: 0 8px;
+      a{
+        text-decoration: none;
+        color: white;
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 16px;
+        height: 40px;   
+        padding: 0 16px;
+        i{
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+  .playlist{
+    margin-top: 24px;
+    ul{
       list-style: none;
       padding: 0;
       li {
-          padding: 0 8px;
-          a{
-              text-decoration: none;
-              color: white;
-              font-size: 0.9em;
-              display: flex;
-              align-items: center;
-              cursor: pointer;
-              gap: 16px;
-              height: 40px;   
-              padding: 0 16px;
-              i{
-                  font-size: 1.4em;
-              }
+        padding: 0 8px;
+        a{
+          text-decoration: none;
+          color: white;
+          font-size: 0.9em;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          gap: 16px;
+          height: 40px;   
+          padding: 0 16px;
+          i{
+            font-size: 1.5em;
           }
-          
+          .bi-plus{
+            color: black;
+            background-color: rgb(198, 197, 197);
+          }
+        }        
       }
+    }
   }
-  .playlist{
-      margin-top: 24px;
-      ul{
-          list-style: none;
-          padding: 0;
-          li {
-              padding: 0 8px;
-              a{
-                  text-decoration: none;
-                  color: white;
-                  font-size: 1.2em;
-                  display: flex;
-                  align-items: center;
-                  cursor: pointer;
-                  gap: 16px;
-                  height: 40px;   
-                  padding: 0 16px;
-                  i{
-                      font-size: 1.3em;
-                  }
-              }
-              
-          }
-      }
+  .links{
+    margin: 32px 0;
+    padding: 0 24px;
+    text-align: start;
+    color: gray;
+    a{
+      text-decoration-line: none;
+      margin-bottom: 8px;
+      margin-right: 16px;
+    }
   }
 }
