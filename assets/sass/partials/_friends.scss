@@ -5,6 +5,11 @@ aside {
   padding: 20px;
   div.friendInfo {
     margin-left: 10px;
+    img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: center;
+    }
   }
   span.friendTime,
   div.friendSong,

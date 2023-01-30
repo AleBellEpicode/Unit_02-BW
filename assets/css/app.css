@@ -156,6 +156,11 @@ aside {
 aside div.friendInfo {
   margin-left: 10px;
 }
+aside div.friendInfo img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
 aside span.friendTime,
 aside div.friendSong,
 aside div.friendAlbum {
