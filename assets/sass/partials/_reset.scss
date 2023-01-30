@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.cdnfonts.com/css/circular-std");
+
 html,
 body,
 div,
@@ -89,7 +89,6 @@ video {
   border: 0;
   vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -104,21 +103,17 @@ nav,
 section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
-
 ol,
 ul {
   list-style: none;
 }
-
 blockquote,
 q {
   quotes: none;
 }
-
 blockquote:before,
 blockquote:after,
 q:before,
@@ -126,21 +121,7 @@ q:after {
   content: "";
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-* {
-  font-family: "Circular Std", sans-serif;
-}
-
-body {
-  background-color: black;
-  color: white;
-}
-
-main {
-  background-color: #121212;
-}/*# sourceMappingURL=app.css.map */
