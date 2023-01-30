@@ -55,3 +55,12 @@
 .dropdown-item:hover {
   background-color: #3e3e3e;
 }
+.playlist-main-card {
+  width: 17em;
+}
+.playlist-main-img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  width: 50px;
+}
