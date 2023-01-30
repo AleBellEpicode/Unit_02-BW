@@ -1,3 +1,70 @@
-navbar {
-  width: 350px;
+
+navbar{
+  background-color: black;
+  // display: flex;
+  flex-direction: column;
+
+  min-width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  .logo{
+      color:white;
+      margin-bottom: 18px;
+      padding-right: 24px;
+      padding-left: 24px;
+      padding-top: 24px;
+      .spotylogo{
+          height: 40px;
+          max-width: 131px;
+          width: 100%;
+      }
+  }
+  ul{
+      list-style: none;
+      padding: 0;
+      li {
+          padding: 0 8px;
+          a{
+              text-decoration: none;
+              color: white;
+              font-size: 0.9em;
+              display: flex;
+              align-items: center;
+              cursor: pointer;
+              gap: 16px;
+              height: 40px;   
+              padding: 0 16px;
+              i{
+                  font-size: 1.4em;
+              }
+          }
+          
+      }
+  }
+  .playlist{
+      margin-top: 24px;
+      ul{
+          list-style: none;
+          padding: 0;
+          li {
+              padding: 0 8px;
+              a{
+                  text-decoration: none;
+                  color: white;
+                  font-size: 1.2em;
+                  display: flex;
+                  align-items: center;
+                  cursor: pointer;
+                  gap: 16px;
+                  height: 40px;   
+                  padding: 0 16px;
+                  i{
+                      font-size: 1.3em;
+                  }
+              }
+              
+          }
+      }
+  }
 }
