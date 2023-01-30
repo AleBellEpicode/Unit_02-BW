@@ -143,4 +143,25 @@ body {
 
 main {
   background-color: #121212;
+}
+
+.card {
+  background-color: #000;
+}
+
+.btn-save {
+  background-color: #000;
+}
+
+.btn-play {
+  background-color: #1ed760;
+}
+
+.showcase-img {
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 200px;
 }/*# sourceMappingURL=app.css.map */
