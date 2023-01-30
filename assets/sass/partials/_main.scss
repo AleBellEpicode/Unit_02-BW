@@ -9,10 +9,49 @@
 .btn-play {
   background-color: $bg-green;
 }
-
+.btn-play:hover {
+  background-color: $bg-green;
+  color: black;
+  transform: scale(1.01);
+}
+.btn-save:hover {
+  transform: scale(1.01);
+}
+.account-pill {
+  background-color: $bg-black;
+}
 .showcase-img {
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
   width: 200px;
+}
+.btn-forward_backward {
+  background-color: $bg-black;
+}
+#showcase-card {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    18deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(24, 24, 24, 1) 70%,
+    rgba(33, 33, 33, 1) 100%
+  );
+}
+.dropdown-toggle::after {
+  content: unset;
+}
+.text-decoration-none {
+  color: grey;
+}
+
+.showcase-pills {
+  width: 5vw;
+}
+.dropdown-menu {
+  background-color: #282828;
+  padding: 3px;
+}
+.dropdown-item:hover {
+  background-color: #3e3e3e;
 }
