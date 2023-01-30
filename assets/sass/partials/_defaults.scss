@@ -1,0 +1,16 @@
+@import url("https://fonts.cdnfonts.com/css/circular-std");
+* {
+  font-family: "Circular Std", sans-serif;
+}
+
+$bg-black: #000;
+$bg-dark: #121212;
+
+body {
+  background-color: black;
+  color: white;
+}
+
+main {
+  background-color: $bg-dark;
+}
