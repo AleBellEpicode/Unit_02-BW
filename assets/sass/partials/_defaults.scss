@@ -6,6 +6,13 @@
 $bg-black: #000;
 $bg-dark: #212121;
 $bg-green: #1ed760;
+$bg-hover: #272727;
+$bg-black-gradient: linear-gradient(
+  18deg,
+  rgba(0, 0, 0, 1) 0%,
+  rgba(24, 24, 24, 1) 70%,
+  rgba(33, 33, 33, 1) 100%
+);
 body {
   background-color: black;
   color: white;

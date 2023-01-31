@@ -15,11 +15,15 @@ footer {
     height: 50px;
   }
   #customRange1 {
-    width: 100px;
+    width: 150px;
     margin-left: 1em;
   }
   .bi {
-    font-size: 0.7em;
+    color: gray;
     margin-left: 1em;
+    &:hover {
+      transform: scale(1.1);
+      color: white;
+    }
   }
 }
