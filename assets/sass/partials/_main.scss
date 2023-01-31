@@ -1,6 +1,9 @@
 body {
   background: $bg-black-gradient;
 }
+main {
+  overflow-y: scroll;
+}
 a {
   text-decoration: none;
 }
@@ -60,14 +63,20 @@ a {
   background-color: #3e3e3e;
 }
 .playlist-main-card {
-  min-width: 45px;
+  min-width: 250px;
+  max-width: 385px;
+  border-radius: 0px;
 }
-
+#middleShowcase {
+  @media screen and(max-width:768px) {
+    justify-content: center !important;
+  }
+}
 .playlist-main-img {
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
-  width: 50px;
+  width: 59px;
 }
 .bi-play-circle-fill {
   color: $bg-green;
@@ -91,5 +100,34 @@ a {
     font-size: 40px;
     right: 7%;
     top: 29%;
+  }
+}
+*::-webkit-scrollbar {
+  width: 9px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(124, 123, 123);
+  border: 3px solid rgb(124, 123, 123);
+}
+#firstToGo {
+  @media screen and(max-width: 1245px) {
+    display: none;
+  }
+}
+
+#secondToGo {
+  @media screen and(max-width: 870px) {
+    display: none;
+  }
+}
+#thirdToGo {
+  @media screen and(max-width: 720px) {
+    display: none;
+  }
+}
+#runAndHide,
+#runAndHide2 {
+  @media screen and (max-width: 1762px) {
+    display: none !important;
   }
 }
