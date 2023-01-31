@@ -71,6 +71,13 @@ navbar{
     #playlist-name-display{
       color: rgb(179, 179, 179);
       padding: 5px 20px;
+      line-height: 20px;
+    }
+    #playlist-name-display a:hover{
+      color: white;
+    }
+    #playlist-name-display a:active{
+      color: white;
     }
     ul{
       list-style: none;
