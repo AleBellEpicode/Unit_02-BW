@@ -29,6 +29,18 @@ const fetchByQuery = async (type = 'query', query) => {
          }
          break;
 
+      case 'song':
+         res = await fetch(`${APIUrl}song/${query}`)
+         try {
+            if (res.ok) {
+               const song = await res.json()
+               return await song
+            }
+         } catch (err) {
+            console.log('Error while fetching')
+         }
+         break;
+
       default:
          res = await fetch(`${APIUrl}search?q=${query}`)
          try {
@@ -43,6 +55,11 @@ const fetchByQuery = async (type = 'query', query) => {
    }
 }
 
+/* utilizzo: fetchByQuery('tipologiaquery', 'query')
+tipologia per id: album, song, artist
+altro tipo: 'query' */
+
+
 const searchQuery = async (string) => {
    let songs = await fetchByQuery('query', string)
    let albums = []
@@ -52,4 +69,13 @@ const searchQuery = async (string) => {
    return await { songs, albums }
    /*  DEBUG  await console.log({ songs, albums }) */
    /* utilizzo: await searchQuery('ricerca') */
+}
+
+const saveLiked = (id) => {
+   likedSongs = JSON.parse(localStorage.getItem('liked'))
+   if (likedSongs == null) {
+      likedSongs = []
+   }
+   likedSongs.push(id)
+   localStorage.setItem('liked', JSON.stringify(likedSongs))
 }
