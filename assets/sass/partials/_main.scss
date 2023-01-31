@@ -64,7 +64,9 @@ a {
 }
 .playlist-main-card {
   min-width: 45px;
-  max-width: 300px;
+  max-width: 15em;
+  min-height: 60px;
+  max-height: 60px;
 }
 
 .playlist-main-img {
@@ -98,9 +100,31 @@ a {
   }
 }
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 9px;
 }
 *::-webkit-scrollbar-thumb {
   background-color: rgb(124, 123, 123);
   border: 3px solid rgb(124, 123, 123);
+}
+#firstToGo {
+  @media screen and(max-width: 1245px) {
+    display: none;
+  }
+}
+
+#secondToGo {
+  @media screen and(max-width: 870px) {
+    display: none;
+  }
+}
+#thirdToGo {
+  @media screen and(max-width: 720px) {
+    display: none;
+  }
+}
+#runAndHide,
+#runAndHide2 {
+  @media screen and(max-width: 992px) {
+    display: none;
+  }
 }
