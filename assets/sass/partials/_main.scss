@@ -76,12 +76,20 @@ a {
 .playing-card:hover {
   background-color: $bg-hover;
   cursor: pointer;
-  .bi-play-circle-fill {
+  .myPlaylist-playButton {
     visibility: visible;
     border-radius: 50%;
     box-shadow: -1px 0px 15px -2px #000000;
     font-size: 30px;
     right: 0%;
     top: 19%;
+  }
+  .suggestedPlaylist-playButton {
+    visibility: visible;
+    border-radius: 50%;
+    box-shadow: -1px 0px 15px -2px #000000;
+    font-size: 40px;
+    right: 7%;
+    top: 29%;
   }
 }
