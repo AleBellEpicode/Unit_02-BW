@@ -1,7 +1,10 @@
-.card {
-  background-color: $bg-black;
+body {
+  background: $bg-black-gradient;
 }
-
+a {
+  text-decoration: none;
+}
+.card,
 .btn-save {
   background-color: $bg-black;
 }
@@ -37,6 +40,7 @@
     rgba(24, 24, 24, 1) 70%,
     rgba(33, 33, 33, 1) 100%
   );
+  padding: 12px;
 }
 .dropdown-toggle::after {
   content: unset;
@@ -64,4 +68,20 @@
   object-fit: cover;
   object-position: center;
   width: 50px;
+}
+.bi-play-circle-fill {
+  color: $bg-green;
+  visibility: hidden;
+}
+.playing-card:hover {
+  background-color: $bg-hover;
+  cursor: pointer;
+  .bi-play-circle-fill {
+    visibility: visible;
+    border-radius: 50%;
+    box-shadow: -1px 0px 15px -2px #000000;
+    font-size: 30px;
+    right: 0%;
+    top: 19%;
+  }
 }
