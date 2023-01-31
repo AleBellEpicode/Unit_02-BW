@@ -73,6 +73,7 @@ navbar{
       color: rgb(179, 179, 179);
       padding: 5px 20px;
       line-height: 20px;
+      overflow:auto;
     }
     #playlist-name-display a:hover{
       color: white;
@@ -118,6 +119,7 @@ navbar{
     margin-bottom: 70px;   //modificabile perchè il footer da problemi
     padding: 0 24px;
     text-align: start;
+    z-index: 1;
     li{
       padding: 0px;
     }
