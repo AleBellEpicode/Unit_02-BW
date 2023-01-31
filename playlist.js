@@ -14,11 +14,19 @@ submitPlaylistBtn.addEventListener("click", function() {
     let playlistName = playlistNameInput.value;
     let playlistLink = document.createElement("a");
     playlistLink.innerText = playlistName;
-  
-    let playlistDiv = document.createElement("div");
-    playlistDiv.appendChild(playlistLink);
-    playlistNameDisplay.appendChild(playlistDiv);
     
+    let playlistDiv = document.createElement("div");
+    
+    let playlistId = JSON.parse(localStorage.getItem("playlist"))
+
+    let newPlaylistId = playlistId.length +1
+
+    playlistDiv.id = newPlaylistId
+
+    playlistDiv.appendChild(playlistLink);
+
+    playlistNameDisplay.appendChild(playlistDiv);
+
     localStorage.setItem(playlistName, JSON.stringify([]));
 });
 
