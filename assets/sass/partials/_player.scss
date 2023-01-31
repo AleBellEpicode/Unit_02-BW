@@ -1,8 +1,6 @@
 footer {
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  background-color: $bg-dark;
+  background-color: $bg-black;
   #coverContainer {
     background-color: orange;
     width: 50px;
@@ -25,5 +23,9 @@ footer {
       transform: scale(1.1);
       color: white;
     }
+  }
+
+  #playerPlay {
+    visibility: visible;
   }
 }
