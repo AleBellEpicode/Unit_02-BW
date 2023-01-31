@@ -43,9 +43,13 @@
       </li>
     </ul>
     <div class="playlist">
+      <div id="playlist-input">
+        <input type="text" id="playlist-name-input">
+        <button id="submit-playlist-btn">Crea</button>
+      </div>
       <ul>
         <li>
-          <a href="#">
+          <a href="#" id="create-playlist">
             <i class="bi bi-plus"></i>
             <span>Crea playlist</span>
           </a>
@@ -57,17 +61,17 @@
           </a>
         </li>
       </ul>
+      <div id="playlist-name-display"></div>
     </div>
 
-    </div>
     <div class="links">
       <ul>
-        <li><a href="#"></a>Informazioni legali</li>
-        <li><a href="#"></a>Centro sulla privacy</li>
-        <li><a href="#"></a>Informativa sulla privacy</li>
-        <li><a href="#"></a>Impostazioni cookie</li>
-        <li><a href="#"></a>Info annunci</li>
-        <li><a href="#"></a>Politica sui cookie</li>
+        <li><a href="#"><span>Informazioni legali</span></a></li>
+        <li><a href="#"><span>Centro sulla privacy</span></a></li>
+        <li><a href="#"><span>Informativa sulla privacy</span></a></li>
+        <li><a href="#"><span>Impostazioni cookie</span></a></li>
+        <li><a href="#"><span>Info annunci</span></a></li>
+        <li><a href="#"><span>Politica sui cookie</span></a></li>
       </ul>
     </div>
   </navbar>
@@ -278,6 +282,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+    <script src="playlist.js"></script>
 </body>
 
 </html>

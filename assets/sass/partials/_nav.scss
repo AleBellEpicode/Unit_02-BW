@@ -26,7 +26,7 @@ navbar{
       padding: 0 8px;
       a{
         text-decoration: none;
-        color: white;
+        color:rgb(179, 179, 179);
         font-size: 0.9em;
         display: flex;
         align-items: center;
@@ -38,10 +38,40 @@ navbar{
           font-size: 1.5em;
         }
       }
+      a:hover{
+        color: white;
+      }
+      a:active{
+        color: white;
+      }
     }
   }
   .playlist{
     margin-top: 24px;
+    height: 100%;
+    #playlist-input{
+      display: none;
+      justify-content: center;
+      #playlist-name-input{
+        width: 60%;
+        color: white;
+        background-color: black;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin-right: 8px;
+      }
+      #submit-playlist-btn{
+        color: white;
+        background-color: black;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+    }
+    #playlist-name-display{
+      color: rgb(179, 179, 179);
+      padding: 5px 20px;
+    }
     ul{
       list-style: none;
       padding: 0;
@@ -49,7 +79,7 @@ navbar{
         padding: 0 8px;
         a{
           text-decoration: none;
-          color: white;
+          color: rgb(179, 179, 179);
           font-size: 0.9em;
           display: flex;
           align-items: center;
@@ -64,19 +94,33 @@ navbar{
             color: black;
             background-color: rgb(198, 197, 197);
           }
-        }        
+          
+        }    
+        a:hover{
+          color: white;
+        }
+        a:active{
+          color: white;
+        }
       }
     }
   }
   .links{
-    margin: 32px 0;
+    margin-top: 32px;
+    margin-bottom: 70px;   //modificabile perchè il footer da problemi
     padding: 0 24px;
     text-align: start;
-    color: gray;
+    li{
+      padding: 0px;
+    }
     a{
       text-decoration-line: none;
       margin-bottom: 8px;
       margin-right: 16px;
+      font-size: 0.7em;
+      color: gray;
+      height: 17px;
+      padding: 0px;
     }
   }
 }
