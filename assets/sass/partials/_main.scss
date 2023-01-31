@@ -1,6 +1,9 @@
 body {
   background: $bg-black-gradient;
 }
+main {
+  overflow-y: scroll;
+}
 a {
   text-decoration: none;
 }
@@ -61,6 +64,7 @@ a {
 }
 .playlist-main-card {
   min-width: 45px;
+  max-width: 300px;
 }
 
 .playlist-main-img {
@@ -92,4 +96,11 @@ a {
     right: 7%;
     top: 29%;
   }
+}
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(124, 123, 123);
+  border: 3px solid rgb(124, 123, 123);
 }
