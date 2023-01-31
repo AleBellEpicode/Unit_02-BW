@@ -71,12 +71,15 @@ const searchQuery = async (string) => {
    /* utilizzo: await searchQuery('ricerca') */
 }
 
-const saveInPlaylist = (id, playlist = 'PL00', plName = 'Brani che ti piacciono') => {
-   likedSongs = JSON.parse(localStorage.getItem(playlist))
-   if (likedSongs == null) {
-      likedSongs = {}
-      likedSongs[plName] = []
+const saveInPlaylist = (id, plId = 0, plName = 'Brani che ti piacciono') => {
+   likedSongs = JSON.parse(localStorage.getItem('playlist'))
+   if (likedSongs === null) {
+      likedSongs = [{
+         id: plId,
+         name: plName,
+         songs: []
+      }];
    }
-   likedSongs[plName].push(id)
-   localStorage.setItem(playlist, JSON.stringify(likedSongs))
+   likedSongs[plId].songs.push(id)
+   localStorage.setItem('playlists', JSON.stringify(likedSongs))
 }
