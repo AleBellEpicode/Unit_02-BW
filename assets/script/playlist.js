@@ -21,6 +21,18 @@ submitPlaylistBtn.addEventListener("click", function () {
 
     playlistNameDisplay.appendChild(playlistDiv);
 
-    localStorage.setItem(JSON.stringify( playlistName, playlistName));
+    localStorage.setItem(JSON.stringify(playlistName, playlistName));
 });
 
+const saveInPlaylist = (id, plId = 0, plName = 'Brani che ti piacciono') => {
+    likedSongs = JSON.parse(localStorage.getItem('playlist'))
+    if (likedSongs === null) {
+        likedSongs = [{
+            id: plId,
+            name: plName,
+            songs: []
+        }];
+    }
+    likedSongs[plId].songs.push(id)
+    localStorage.setItem('playlists', JSON.stringify(likedSongs))
+}

@@ -14,6 +14,4 @@ const hideSection = (event, parents = 0) => {
          event.target.classList.add("forceDNone")
          break;
    }
-
-
 }
