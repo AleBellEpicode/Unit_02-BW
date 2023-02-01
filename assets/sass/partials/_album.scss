@@ -1,0 +1,31 @@
+$bg-album-gradient: linear-gradient(
+  0deg,
+  rgba(0, 0, 0, 1) 0%,
+  rgba(33, 33, 33, 1) 42%,
+  rgba(182, 175, 23, 1) 100%
+);
+#showcase-card {
+  background: none;
+}
+main {
+  padding: 0;
+  background: $bg-album-gradient;
+}
+
+#album-legend {
+  border-bottom: 1px solid #373535;
+}
+#album-playButton {
+  visibility: visible;
+  border-radius: 50%;
+  font-size: 45px;
+}
+.bi-heart {
+  font-size: 30px;
+}
+.bi-download {
+  font-size: 30px;
+}
+.playlist-top-buttons {
+  color: #bfb4b4;
+}
