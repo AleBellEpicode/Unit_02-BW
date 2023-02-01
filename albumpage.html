@@ -1,82 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./assets/css/app.min.css" />
+    <title>Spotify Clone</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="./assets/css/app.min.css" />
-  <title>Spotify Clone</title>
-</head>
-
-<body class="d-flex">
-
-  <navbar class="d-none d-lg-block">
-    <div class="logo">
-      <svg viewBox="0 0 1134 340" class="spotylogo">
-        <title>Spotify</title>
-        <path fill="currentColor"
-          d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z">
-        </path>
-      </svg>
-    </div>
-    <ul>
-      <li>
-        <a href="#">
-          <i class="bi bi-house-door-fill"></i>
-          <span>Home</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-search"></i>
-          <span>Cerca</span>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i class="bi bi-collection"></i>
-          <span>La tua libreria</span>
-        </a>
-      </li>
-    </ul>
-    <div class="playlist">
-      <div id="playlist-input">
-        <input type="text" id="playlist-name-input">
-        <button id="submit-playlist-btn">Crea</button>
+  <body class="d-flex">
+    <navbar class="d-none d-lg-block">
+      <div class="logo">
+        <svg viewBox="0 0 1134 340" class="spotylogo">
+          <title>Spotify</title>
+          <path
+            fill="currentColor"
+            d="M8 171c0 92 76 168 168 168s168-76 168-168S268 4 176 4 8 79 8 171zm230 78c-39-24-89-30-147-17-14 2-16-18-4-20 64-15 118-8 162 19 11 7 0 24-11 18zm17-45c-45-28-114-36-167-20-17 5-23-21-7-25 61-18 136-9 188 23 14 9 0 31-14 22zM80 133c-17 6-28-23-9-30 59-18 159-15 221 22 17 9 1 37-17 27-54-32-144-35-195-19zm379 91c-17 0-33-6-47-20-1 0-1 1-1 1l-16 19c-1 1-1 2 0 3 18 16 40 24 64 24 34 0 55-19 55-47 0-24-15-37-50-46-29-7-34-12-34-22s10-16 23-16 25 5 39 15c0 0 1 1 2 1s1-1 1-1l14-20c1-1 1-1 0-2-16-13-35-20-56-20-31 0-53 19-53 46 0 29 20 38 52 46 28 6 32 12 32 22 0 11-10 17-25 17zm95-77v-13c0-1-1-2-2-2h-26c-1 0-2 1-2 2v147c0 1 1 2 2 2h26c1 0 2-1 2-2v-46c10 11 21 16 36 16 27 0 54-21 54-61s-27-60-54-60c-15 0-26 5-36 17zm30 78c-18 0-31-15-31-35s13-34 31-34 30 14 30 34-12 35-30 35zm68-34c0 34 27 60 62 60s62-27 62-61-26-60-61-60-63 27-63 61zm30-1c0-20 13-34 32-34s33 15 33 35-13 34-32 34-33-15-33-35zm140-58v-29c0-1 0-2-1-2h-26c-1 0-2 1-2 2v29h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v58c0 23 11 35 34 35 9 0 18-2 25-6 1 0 1-1 1-2v-21c0-1 0-2-1-2h-2c-5 3-11 4-16 4-8 0-12-4-12-12v-54h30c1 0 2-1 2-2v-22c0-1-1-2-2-2h-30zm129-3c0-11 4-15 13-15 5 0 10 0 15 2h1s1-1 1-2V93c0-1 0-2-1-2-5-2-12-3-22-3-24 0-36 14-36 39v5h-13c-1 0-2 1-2 2v22c0 1 1 2 2 2h13v89c0 1 1 2 2 2h26c1 0 1-1 1-2v-89h25l37 89c-4 9-8 11-14 11-5 0-10-1-15-4h-1l-1 1-9 19c0 1 0 3 1 3 9 5 17 7 27 7 19 0 30-9 39-33l45-116v-2c0-1-1-1-2-1h-27c-1 0-1 1-1 2l-28 78-30-78c0-1-1-2-2-2h-44v-3zm-83 3c-1 0-2 1-2 2v113c0 1 1 2 2 2h26c1 0 1-1 1-2V134c0-1 0-2-1-2h-26zm-6-33c0 10 9 19 19 19s18-9 18-19-8-18-18-18-19 8-19 18zm245 69c10 0 19-8 19-18s-9-18-19-18-18 8-18 18 8 18 18 18zm0-34c9 0 17 7 17 16s-8 16-17 16-16-7-16-16 7-16 16-16zm4 18c3-1 5-3 5-6 0-4-4-6-8-6h-8v19h4v-6h4l4 6h5zm-3-9c2 0 4 1 4 3s-2 3-4 3h-4v-6h4z"
+          ></path>
+        </svg>
       </div>
       <ul>
         <li>
-          <a href="#" id="create-playlist">
-            <i class="bi bi-plus"></i>
-            <span>Crea playlist</span>
+          <a href="#">
+            <i class="bi bi-house-door-fill"></i>
+            <span>Home</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <i class="bi bi-box2-heart"></i>
-            <span>Brani che ti piacciono</span>
+            <i class="bi bi-search"></i>
+            <span>Cerca</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-collection"></i>
+            <span>La tua libreria</span>
           </a>
         </li>
       </ul>
-      <div id="playlist-name-display"></div>
-    </div>
+      <div class="playlist">
+        <div id="playlist-input">
+          <input type="text" id="playlist-name-input" />
+          <button id="submit-playlist-btn">Crea</button>
+        </div>
+        <ul>
+          <li>
+            <a href="#" id="create-playlist">
+              <i class="bi bi-plus"></i>
+              <span>Crea playlist</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-box2-heart"></i>
+              <span>Brani che ti piacciono</span>
+            </a>
+          </li>
+        </ul>
+        <div id="playlist-name-display"></div>
+      </div>
 
-    <div class="links">
-      <ul>
-        <li><a href="#"><span>Informazioni legali</span></a></li>
-        <li><a href="#"><span>Centro sulla privacy</span></a></li>
-        <li><a href="#"><span>Informativa sulla privacy</span></a></li>
-        <li><a href="#"><span>Impostazioni cookie</span></a></li>
-        <li><a href="#"><span>Info annunci</span></a></li>
-        <li><a href="#"><span>Politica sui cookie</span></a></li>
-      </ul>
-    </div>
-  </navbar>
-  <!-- Ids=
+      <div class="links">
+        <ul>
+          <li>
+            <a href="#"><span>Informazioni legali</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Centro sulla privacy</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Informativa sulla privacy</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Impostazioni cookie</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Info annunci</span></a>
+          </li>
+          <li>
+            <a href="#"><span>Politica sui cookie</span></a>
+          </li>
+        </ul>
+      </div>
+    </navbar>
+    <!-- Ids=
       1-article= showcase-card-top
       2-img div id= showcase-card
       3-img id=album-cover
@@ -86,333 +104,428 @@
       6-anno uscita album=album-year
       7-numero tracks=track-number
       8-track runtime=track-time -->
-  <main class="">
-    <article class="" id="showcase-card-top">
-      <div class="container d-flex justify-content-between mt-4 mb-5">
-        <div>
-          <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
-            &#60;
-          </button>
-          <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
-            &#62;
-          </button>
-        </div>
-        <span class="rounded-pill account-pill text-white border border-0 dropdown p-2">
-          <a href="#" class="text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" role="button"
-            aria-expanded="false"><img src="" />Nautilus`s Hook ...</a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading1">Account</a>
-            </li>
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading2">Profile</a>
-            </li>
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading3">Settings</a>
-            </li>
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading4">Log Out</a>
-            </li>
-          </ul>
-        </span>
-      </div>
-      <div class="card flex-row border border-0" id="showcase-card">
-        <img class="card-img rounded-0 showcase-img" id="album-cover" src="https://placekitten.com/200/300"
-          alt="Card image cap" />
-        <div class="card-body d-flex justify-content-center flex-column">
-          <h1 class="card-title mb-5 mt-5" id="album-title">
-            Card title (feat. title)
-          </h1>
+    <main class="">
+      <article class="" id="showcase-card-top">
+        <div class="container d-flex justify-content-between mt-4 mb-5">
           <div>
-            <span id="artist-name">Artist name</span>
-            <span id="album-year">Uscita album</span>
-            <span id="track-number">Numero tracks,</span>
-            <span id="track-time" class="text-secondary">total tracktime.</span>
+            <button
+              class="btn-forward_backward text-secondary border border-0 rounded-circle"
+            >
+              &#60;
+            </button>
+            <button
+              class="btn-forward_backward text-secondary border border-0 rounded-circle"
+            >
+              &#62;
+            </button>
           </div>
+          <span
+            class="rounded-pill account-pill text-white border border-0 dropdown p-2"
+          >
+            <a
+              href="#"
+              class="text-decoration-none dropdown-toggle text-white"
+              data-bs-toggle="dropdown"
+              role="button"
+              aria-expanded="false"
+              ><img src="" />Nautilus`s Hook ...</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading1"
+                  >Account</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading2"
+                  >Profile</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading3"
+                  >Settings</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading4"
+                  >Log Out</a
+                >
+              </li>
+            </ul>
+          </span>
         </div>
-      </div>
-    </article>
-    <div class="container mt-3" id="playlist-buttons-container">
-      <div class="mt-4 px-3 d-flex justify-content-start align-items-center gap-4" id="playlist-buttons">
-        <i class="bi bi-play-circle-fill btn p-0" id="album-playButton"></i>
-        <i class="bi bi-heart playlist-top-buttons btn p-0" id="album-like"></i>
-        <i class="bi bi-download playlist-top-buttons btn p-0" id="album-download"></i>
-        <span class="dropdown">
-          <a href="#" class="ms-2 text-decoration-none dropdown-toggle playlist-top-buttons" data-bs-toggle="dropdown"
-            role="button" aria-expanded="false">. . .</a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading5">Add to que</a>
-            </li>
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading6">Download</a>
-            </li>
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading7">Add to playlist</a>
-            </li>
-          </ul>
-        </span>
-      </div>
-      <div class="container mt-4 px-4" id="album-tracklist-container">
-        <div class="row row-cols-3" id="album-legend">
-          <div class="col col-5 d-flex lh-lg">
-            <span class="align-self-center me-3 text-secondary">#</span>
-            <div class="d-flex flex-column text-secondary">Titolo</div>
-          </div>
-          <div class="col col-3 flex-fill justify-content-end d-none d-md-flex">
-            <p class="text-secondary">Riproduzioni</p>
-          </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p class="text-secondary">track-lenght-icon</p>
-          </div>
-        </div>
-        <!-- inizio album track-list -->
-        <div class="row row-cols-3 mt-5">
-          <div class="col col-5 d-flex">
-            <span class="align-self-center me-4">1</span>
-            <div id="track-name" class="d-flex flex-column">
-              trackName
-              <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+        <div class="card flex-row border border-0" id="showcase-card">
+          <img
+            class="card-img rounded-0 showcase-img"
+            id="album-cover"
+            src="https://placekitten.com/200/300"
+            alt="Card image cap"
+          />
+          <div class="card-body d-flex justify-content-center flex-column">
+            <h1 class="card-title mb-5 mt-5" id="album-title">
+              Card title (feat. title)
+            </h1>
+            <div>
+              <span id="artist-name">Artist name</span>
+              <span id="album-year">Uscita album</span>
+              <span id="track-number">Numero tracks,</span>
+              <span id="track-time" class="text-secondary"
+                >total tracktime.</span
+              >
             </div>
           </div>
-          <div class="col col-3 flex-fill justify-content-end d-none d-md-flex">
-            <p id="play-number" class="text-secondary">Numero riproduzioni</p>
-          </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="track-lenght " class="text-secondary">track-lenght</p>
-          </div>
         </div>
-        <!-- fine prima row  -->
-        <div class="row row-cols-3 mt-5">
-          <div class="col col-5 d-flex">
-            <span class="align-self-center me-4">2</span>
-            <div id="track-name" class="d-flex flex-column">
-              trackName
-              <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+      </article>
+      <div class="container mt-3" id="playlist-buttons-container">
+        <div
+          class="mt-4 px-3 d-flex justify-content-start align-items-center gap-4"
+          id="playlist-buttons"
+        >
+          <i class="bi bi-play-circle-fill btn p-0" id="album-playButton"></i>
+          <i
+            class="bi bi-heart playlist-top-buttons btn p-0"
+            id="album-like"
+          ></i>
+          <i
+            class="bi bi-download playlist-top-buttons btn p-0"
+            id="album-download"
+          ></i>
+          <span class="dropdown">
+            <a
+              href="#"
+              class="ms-2 text-decoration-none dropdown-toggle playlist-top-buttons"
+              data-bs-toggle="dropdown"
+              role="button"
+              aria-expanded="false"
+              >. . .</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading5"
+                  >Add to que</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading6"
+                  >Download</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading7"
+                  >Add to playlist</a
+                >
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="container mt-4 px-4" id="album-tracklist-container">
+          <div class="row row-cols-3" id="album-legend">
+            <div class="col col-5 d-flex lh-lg">
+              <span class="align-self-center me-3 text-secondary">#</span>
+              <div class="d-flex flex-column text-secondary">Titolo</div>
+            </div>
+            <div
+              class="col col-3 flex-fill justify-content-end d-none d-md-flex"
+            >
+              <p class="text-secondary">Riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p class="text-secondary">track-lenght-icon</p>
             </div>
           </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="play-number" class="text-secondary">Numero riproduzioni</p>
-          </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="track-lenght " class="text-secondary">track-lenght</p>
-          </div>
-        </div>
-        <div class="row row-cols-3 mt-5">
-          <div class="col col-5 d-flex">
-            <span class="align-self-center me-4">3</span>
-            <div id="track-name" class="d-flex flex-column">
-              trackName
-              <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+          <!-- inizio album track-list -->
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">1</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div
+              class="col col-3 flex-fill justify-content-end d-none d-md-flex"
+            >
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
             </div>
           </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="play-number" class="text-secondary">Numero riproduzioni</p>
-          </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="track-lenght " class="text-secondary">track-lenght</p>
-          </div>
-        </div>
-        <div class="row row-cols-3 mt-5">
-          <div class="col col-5 d-flex">
-            <span class="align-self-center me-4">4</span>
-            <div id="track-name" class="d-flex flex-column">
-              trackName
-              <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+          <!-- fine prima row  -->
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">2</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
             </div>
           </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="play-number" class="text-secondary">Numero riproduzioni</p>
-          </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="track-lenght " class="text-secondary">track-lenght</p>
-          </div>
-        </div>
-        <div class="row row-cols-3 mt-5">
-          <div class="col col-5 d-flex">
-            <span class="align-self-center me-4">5</span>
-            <div id="track-name" class="d-flex flex-column">
-              trackName
-              <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">3</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
             </div>
           </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="play-number" class="text-secondary">Numero riproduzioni</p>
-          </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="track-lenght " class="text-secondary">track-lenght</p>
-          </div>
-        </div>
-        <div class="row row-cols-3 mt-5">
-          <div class="col col-5 d-flex">
-            <span class="align-self-center me-4">6</span>
-            <div id="track-name" class="d-flex flex-column">
-              trackName
-              <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">4</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
             </div>
           </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="play-number" class="text-secondary">Numero riproduzioni</p>
-          </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="track-lenght " class="text-secondary">track-lenght</p>
-          </div>
-        </div>
-        <div class="row row-cols-3 mt-5">
-          <div class="col col-5 d-flex">
-            <span class="align-self-center me-4">7</span>
-            <div id="track-name" class="d-flex flex-column">
-              trackName
-              <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">5</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
             </div>
           </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="play-number" class="text-secondary">Numero riproduzioni</p>
-          </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="track-lenght " class="text-secondary">track-lenght</p>
-          </div>
-        </div>
-        <div class="row row-cols-3 mt-5">
-          <div class="col col-5 d-flex">
-            <span class="align-self-center me-4">8</span>
-            <div id="track-name" class="d-flex flex-column">
-              trackName
-              <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">6</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
             </div>
           </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">7</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
+            </div>
           </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p id="track-lenght " class="text-secondary">track-lenght</p>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">8</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  <aside id="friendsList" class="d-flex flex-column d-none d-xl-block">
-    <div class="d-flex justify-content-between align-items-center">
-      <h5>Attività Amici</h5>
-      <div><i class="bi bi-person-plus" onclick="alert('Non hai amici, fattene una ragione!')"></i>
-        <i class="bi bi-x" onclick="hideSection(event, 3)"></i>
-      </div>
-    </div>
-    <div class="friend d-flex my-4">
-      <div class="friendAvatar w-25">
-        <img src="./assets/img/vm93.jpg" alt="Vincenzo M. Avatar" class="w-100 rounded-circle" />
-      </div>
-      <div class="friendInfo w-100">
-        <div class="friendName d-flex justify-content-between mb-2">
-          Vincenzo M. <span class="friendTime">29y Ago</span>
-        </div>
-        <div class="friendSong my-2">Why don't you - Radio Edit</div>
-        <div class="friendAlbum">
-          <i class="bi bi-music-note-beamed"></i> Epicode BuildWeek
+    </main>
+    <aside id="friendsList" class="d-flex flex-column d-none d-xl-block">
+      <div class="d-flex justify-content-between align-items-center">
+        <h5>Attività Amici</h5>
+        <div>
+          <i
+            class="bi bi-person-plus"
+            onclick="alert('Non hai amici, fattene una ragione!')"
+          ></i>
+          <i class="bi bi-x" onclick="hideSection(event, 3)"></i>
         </div>
       </div>
-    </div>
-    <div class="friend d-flex my-4">
-      <div class="friendAvatar w-25">
-        <img src="./assets/img/feliciano.jpg" alt="Feliciano C. Avatar" class="w-100 rounded-circle" />
-      </div>
-      <div class="friendInfo w-100">
-        <div class="friendName d-flex justify-content-between mb-2">
-          Feliciano C. <span class="friendTime">Ever</span>
+      <div class="friend d-flex my-4">
+        <div class="friendAvatar w-25">
+          <img
+            src="./assets/img/vm93.jpg"
+            alt="Vincenzo M. Avatar"
+            class="w-100 rounded-circle"
+          />
         </div>
-        <div class="friendSong my-2">Title - Artist</div>
-        <div class="friendAlbum">
-          <i class="bi bi-music-note-beamed"></i> Album-Playlist
-        </div>
-      </div>
-    </div>
-    <div class="friend d-flex my-4">
-      <div class="friendAvatar w-25">
-        <img src="./assets/img/alessandro.jpg" alt="Alessandro B. Avatar" class="w-100 rounded-circle" />
-      </div>
-      <div class="friendInfo w-100">
-        <div class="friendName d-flex justify-content-between mb-2">
-          Alessandro B. <span class="friendTime">Ever</span>
-        </div>
-        <div class="friendSong my-2">Title - Artist</div>
-        <div class="friendAlbum">
-          <i class="bi bi-music-note-beamed"></i> Album-Playlist
+        <div class="friendInfo w-100">
+          <div class="friendName d-flex justify-content-between mb-2">
+            Vincenzo M. <span class="friendTime">29y Ago</span>
+          </div>
+          <div class="friendSong my-2">Why don't you - Radio Edit</div>
+          <div class="friendAlbum">
+            <i class="bi bi-music-note-beamed"></i> Epicode BuildWeek
+          </div>
         </div>
       </div>
-    </div>
-    <div class="friend d-flex my-4">
-      <div class="friendAvatar w-25">
-        <img src="https://placekitten.com/50" alt="Dario Hu Avatar" class="w-100 rounded-circle" />
-      </div>
-      <div class="friendInfo w-100">
-        <div class="friendName d-flex justify-content-between mb-2">
-          Dario Hu <span class="friendTime">Ever</span>
+      <div class="friend d-flex my-4">
+        <div class="friendAvatar w-25">
+          <img
+            src="./assets/img/feliciano.jpg"
+            alt="Feliciano C. Avatar"
+            class="w-100 rounded-circle"
+          />
         </div>
-        <div class="friendSong my-2">Title - Artist</div>
-        <div class="friendAlbum">
-          <i class="bi bi-music-note-beamed"></i> Album-Playlist
+        <div class="friendInfo w-100">
+          <div class="friendName d-flex justify-content-between mb-2">
+            Feliciano C. <span class="friendTime">Ever</span>
+          </div>
+          <div class="friendSong my-2">Title - Artist</div>
+          <div class="friendAlbum">
+            <i class="bi bi-music-note-beamed"></i> Album-Playlist
+          </div>
         </div>
       </div>
-    </div>
-  </aside>
-  <footer class="row py-4 fixed-bottom m-0 d-flex justify-content-center align-items-center">
-    <div id="divFooterLeft" class="d-flex align-items-center col-3 d-none d-md-flex">
-      <div id="coverContainer"></div>
-      <div id="songInfoFooter" class="ms-2">
-        <p id="songTitleFooter" class="mb-1">Titolo canzone</p>
-        <p>Nome artista</p>
+      <div class="friend d-flex my-4">
+        <div class="friendAvatar w-25">
+          <img
+            src="./assets/img/alessandro.jpg"
+            alt="Alessandro B. Avatar"
+            class="w-100 rounded-circle"
+          />
+        </div>
+        <div class="friendInfo w-100">
+          <div class="friendName d-flex justify-content-between mb-2">
+            Alessandro B. <span class="friendTime">Ever</span>
+          </div>
+          <div class="friendSong my-2">Title - Artist</div>
+          <div class="friendAlbum">
+            <i class="bi bi-music-note-beamed"></i> Album-Playlist
+          </div>
+        </div>
       </div>
-      <i class="bi bi-heart fs-6 ms-3 iconsFooter"></i>
-      <i class="bi bi-pip fs-6 ms-3 iconsFooter"></i>
-    </div>
+      <div class="friend d-flex my-4">
+        <div class="friendAvatar w-25">
+          <img
+            src="https://placekitten.com/50"
+            alt="Dario Hu Avatar"
+            class="w-100 rounded-circle"
+          />
+        </div>
+        <div class="friendInfo w-100">
+          <div class="friendName d-flex justify-content-between mb-2">
+            Dario Hu <span class="friendTime">Ever</span>
+          </div>
+          <div class="friendSong my-2">Title - Artist</div>
+          <div class="friendAlbum">
+            <i class="bi bi-music-note-beamed"></i> Album-Playlist
+          </div>
+        </div>
+      </div>
+    </aside>
+    <footer
+      class="row py-4 fixed-bottom m-0 d-flex justify-content-center align-items-center"
+    >
+      <div
+        id="divFooterLeft"
+        class="d-flex align-items-center col-3 d-none d-md-flex"
+      >
+        <div id="coverContainer"></div>
+        <div id="songInfoFooter" class="ms-2">
+          <p id="songTitleFooter" class="mb-1">Titolo canzone</p>
+          <p>Nome artista</p>
+        </div>
+        <i class="bi bi-heart fs-6 ms-3 iconsFooter"></i>
+        <i class="bi bi-pip fs-6 ms-3 iconsFooter"></i>
+      </div>
 
-    <div id="divFooterCenter" class="d-flex justify-content-center align-items-center col-6 flex-column">
-      <div id="playerBarFooter">
-        <div class="d-flex justify-content-center align-items-center">
-          <i class="bi bi-shuffle fs-6 mx-2 iconsFooter"></i>
-          <i class="bi bi-skip-start-fill fs-4 mx-2 iconsFooter"></i>
-          <i class="bi bi-play-circle-fill fs-2 text-center mx-2 iconsFooter" id="playerPlay"></i>
-          <i class="bi bi-skip-end-fill fs-4 mx-2 iconsFooter"></i>
-          <i class="bi bi-repeat fs-6 mx-2 iconsFooter"></i>
+      <div
+        id="divFooterCenter"
+        class="d-flex justify-content-center align-items-center col-6 flex-column"
+      >
+        <div id="playerBarFooter">
+          <div class="d-flex justify-content-center align-items-center">
+            <i class="bi bi-shuffle fs-6 mx-2 iconsFooter"></i>
+            <i class="bi bi-skip-start-fill fs-4 mx-2 iconsFooter"></i>
+            <i
+              class="bi bi-play-circle-fill fs-2 text-center mx-2 iconsFooter"
+              id="playerPlay"
+            ></i>
+            <i class="bi bi-skip-end-fill fs-4 mx-2 iconsFooter"></i>
+            <i class="bi bi-repeat fs-6 mx-2 iconsFooter"></i>
+          </div>
+        </div>
+        <div class="w-100 d-flex justify-content-center d-none d-md-flex">
+          <input type="range" value="0" min="0" max="30" id="sliderCenter" />
         </div>
       </div>
-      <div class="w-100 d-flex justify-content-center d-none d-md-flex">
-        <input type="range" value="0" min="0" max="30" id="sliderCenter" />
+
+      <div
+        id="buttonFooter "
+        class="d-flex justify-content-end flex-nowrap align-items-center col-3 d-none d-md-flex"
+      >
+        <i class="bi bi-mic fs-5 iconsFooter"></i>
+        <i class="bi bi-list fs-5 iconsFooter"></i>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="svgFooter"
+          fill="currentColor"
+          class="bi bi-display"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10.67,16.67c0,1.11,.87,2,2,2h5.33c1.13,0,2-.89,2-2V7.33c0-1.11-.87-2-2-2h-5.33c-1.13,0-2,.89-2,2v9.33Zm2,.67c-.4,0-.67-.3-.67-.67V7.33c0-.37,.27-.67,.67-.67h5.33c.4,0,.67,.3,.67,.67v9.33c0,.37-.27,.67-.67,.67h-5.33Z"
+            class="c"
+          />
+          <path
+            d="M16.13,8.83c0-.46-.33-.83-.8-.83s-.8,.37-.8,.83,.33,.83,.8,.83,.8-.37,.8-.83Z"
+            class="c"
+          />
+          <path
+            d="M15.33,14.67c-.53,0-1-.45-1-1s.47-1,1-1,1,.45,1,1-.47,1-1,1Zm-2.33-1c0,1.29,1.07,2.33,2.33,2.33s2.33-1.05,2.33-2.33-1.07-2.33-2.33-2.33-2.33,1.05-2.33,2.33Z"
+            class="c"
+          />
+          <path
+            d="M4,6.67c0-.73,.6-1.33,1.33-1.33h3.33v1.33h-3.33v7.33h3.33v1.33h-3.33c-.73,0-1.33-.6-1.33-1.33V6.67Zm4.67,12h-2v-1.33h2v1.33Z"
+            class="c"
+          />
+        </svg>
+        <i class="bi bi-volume-up fs-5 iconsFooter"></i>
+
+        <input type="range" value="0" min="0" max="30" id="customRange2" />
+
+        <!--<i class="bi bi-arrows-angle-expand fs-6 ms-3"></i>-->
       </div>
-    </div>
+    </footer>
 
-    <div id="buttonFooter " class="d-flex justify-content-end flex-nowrap align-items-center col-3 d-none d-md-flex">
-      <i class="bi bi-mic fs-5 iconsFooter"></i>
-      <i class="bi bi-list fs-5 iconsFooter"></i>
-      <svg xmlns="http://www.w3.org/2000/svg" id="svgFooter" fill="currentColor" class="bi bi-display"
-        viewBox="0 0 24 24">
-        <path
-          d="M10.67,16.67c0,1.11,.87,2,2,2h5.33c1.13,0,2-.89,2-2V7.33c0-1.11-.87-2-2-2h-5.33c-1.13,0-2,.89-2,2v9.33Zm2,.67c-.4,0-.67-.3-.67-.67V7.33c0-.37,.27-.67,.67-.67h5.33c.4,0,.67,.3,.67,.67v9.33c0,.37-.27,.67-.67,.67h-5.33Z"
-          class="c" />
-        <path d="M16.13,8.83c0-.46-.33-.83-.8-.83s-.8,.37-.8,.83,.33,.83,.8,.83,.8-.37,.8-.83Z" class="c" />
-        <path
-          d="M15.33,14.67c-.53,0-1-.45-1-1s.47-1,1-1,1,.45,1,1-.47,1-1,1Zm-2.33-1c0,1.29,1.07,2.33,2.33,2.33s2.33-1.05,2.33-2.33-1.07-2.33-2.33-2.33-2.33,1.05-2.33,2.33Z"
-          class="c" />
-        <path
-          d="M4,6.67c0-.73,.6-1.33,1.33-1.33h3.33v1.33h-3.33v7.33h3.33v1.33h-3.33c-.73,0-1.33-.6-1.33-1.33V6.67Zm4.67,12h-2v-1.33h2v1.33Z"
-          class="c" />
-      </svg>
-      <i class="bi bi-volume-up fs-5 iconsFooter"></i>
-
-      <input type="range" value="0" min="0" max="30" id="customRange2" />
-
-      <!--<i class="bi bi-arrows-angle-expand fs-6 ms-3"></i>-->
-    </div>
-  </footer>
-
-
-
-  <script src="./assets/script/index.js"></script>
-  <script src="./assets/script/playlist.js"></script>
-  <script src="./assets/script/album.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-</body>
-
+    <script src="./assets/script/index.js"></script>
+    <script src="./assets/script/playlist.js"></script>
+    <script src="./assets/script/album.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
