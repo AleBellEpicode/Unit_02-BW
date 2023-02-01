@@ -6,17 +6,6 @@ footer {
     width: 50px;
     height: 50px;
   }
-  @media screen and (max-width: 700px) {
-    border-radius: 15px;
-    position: fixed;
-    right: 0;
-    bottom: 10em;
-    left: 0;
-    z-index: 1030;
-  }
-  @media screen and (min-width: 701px) {
-    border-radius: 0px;
-  }
 
   #playerBarFooter {
     height: 50px;
@@ -37,7 +26,7 @@ footer {
   }
 
   .iconsFooter {
-    color: rgb(192, 185, 185);
+    color: rgb(192, 185, 185); //aggiungere colore a _defaults
     margin-left: 0.1em;
     &:hover {
       transform: scale(1.1);
@@ -56,5 +45,27 @@ footer {
   max-width: 35em;
   ::-webkit-progress-bar {
     background-color: green;
+  }
+}
+
+#FooterMobile {
+  width: 100%;
+  position: fixed;
+  bottom: 7.5em;
+
+  #coverContainerMobile {
+    width: 60px;
+    height: 60px;
+    background-color: aqua; //colore impostato per prova
+    border-radius: 50%;
+  }
+
+  #footerMobileContainer {
+    width: 95%;
+    background-color: $bg-dark;
+    border-radius: 1.2em;
+  }
+  #svgFooter {
+    width: 2em;
   }
 }
