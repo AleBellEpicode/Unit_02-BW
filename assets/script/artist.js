@@ -1,24 +1,23 @@
 window.onload = async () => {
    let queryString = new URLSearchParams(window.location.search)
-   let id = queryString.get("albumId")
+   let id = queryString.get("artistId")
    try {
-      let res = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${id}`)
-      let data = await res.json()
-      //titolo album
-      let albumTitle = document.querySelector("#albumTitle")
-      albumTitle.innerHTML = data.title
+      let restop = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}/top?limit=5`)
+      let resartist = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${id}`)
+      let { data: topSongs } = await restop.json()
+      let artist = await resartist.json()
       //artista album
       let artistName = document.querySelector("#artistName")
-      artistName.innerHTML = data.artist.name
+      artistName.innerHTML = artist.name
       //immagine album
-      let albumImg = document.querySelector("#albumImg")
-      albumImg.src = data.cover_big
+      let artistPic = document.querySelector("#artistPic")
+      artistPic.src = artist.picture_big
       //lista le canzoni dell'album
-      for (let i = 0; i < data.tracks.data.length; i++) {
-         renderTrackList(data.tracks.data[i])
+      for (let i = 0; i < topSongs.length; i++) {
+         renderTrackList(topSongs[i])
       }
       //altri album dell'artista
-      otherAlbums(data.artist.name)
+      otherAlbums(artist.name)
    } catch (err) {
       console.log(err)
       //  window.location.replace('index.html')
@@ -32,7 +31,7 @@ const otherAlbums = async (artist) => {
       let { data: songs } = await res.json()
       let artistOther = document.querySelector('#otherAlbums > h2')
       artistOther.innerHTML += songs[0].artist.name
-      songs.length < 4 ? limitAlbums = songs.length : limitAlbums = 4
+      songs.length < 6 ? limitAlbums = songs.length : limitAlbums = 6
       for (let i = 0; i < limitAlbums; i++) {
          renderRelatedAlbums(songs[i].album)
       }
