@@ -112,12 +112,11 @@
       </div>
     </div>
     <div class="more-buttons">
-      <div class="mt-4 px-3 d-flex justify-content-start align-items-center gap-4" id="playlist-buttons">
+      <div class="px-3 d-flex justify-content-start align-items-center gap-4 play-button" id="playlist-buttons">
         <i class="bi bi-play-circle-fill btn p-0" id="album-playButton"></i>
-        <i class="bi bi-heart playlist-top-buttons btn p-0" id="album-like"></i>
-        <i class="bi bi-download playlist-top-buttons btn p-0" id="album-download"></i>
+        <button class="following">following</button>
         <span class="dropdown">
-          <a href="#" class="ms-2 text-decoration-none dropdown-toggle playlist-top-buttons" data-bs-toggle="dropdown"
+          <a href="#" class="ms-2  text-white text-decoration-none dropdown-toggle playlist-top-buttons" data-bs-toggle="dropdown"
             role="button" aria-expanded="false">. . .</a>
           <ul class="dropdown-menu">
             <li>
@@ -133,15 +132,12 @@
         </span>
       </div>
     </div>
-    <div class="popolari">
-
-    </div>
-    <div class="other">
-
-    </div>
-
-    <div class="container mt-4 px-4" id="album-tracklist-container">
-      <div class="row row-cols-3" id="album-legend">
+   
+    <div class="container mt-2" id="popolari-tracklist-container">
+      <div class="popolari">
+        <span>Popolari</span>
+      </div>
+      <!-- <div class="row row-cols-3" id="album-legend">
         <div class="col col-5 d-flex lh-lg">
           <span class="align-self-center me-3 text-secondary">#</span>
           <div class="d-flex flex-column text-secondary">Titolo</div>
@@ -152,131 +148,162 @@
         <div class="col col-3 flex-fill d-flex justify-content-end">
           <p class="text-secondary">track-lenght-icon</p>
         </div>
-      </div>
+      </div> -->
       <!-- inizio album track-list -->
-      <div class="row row-cols-3 mt-5">
+      <div class="row row-cols-3 mt-2" id="songContainer">
         <div class="col col-5 d-flex">
-          <span class="align-self-center me-4">1</span>
+          <span class=" number me-4">1</span>
+          <span id="play">
+            <i class="bi bi-play-fill"></i>
+          </span>
           <div id="track-name" class="d-flex flex-column">
             trackName
-            <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
           </div>
         </div>
         <div class="col col-3 flex-fill justify-content-end d-none d-md-flex">
-          <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+          <p id="play-number">Numero riproduzioni</p>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
           <p id="track-lenght " class="text-secondary">track-lenght</p>
         </div>
       </div>
       <!-- fine prima row  -->
-      <div class="row row-cols-3 mt-5">
+      <div class="row row-cols-3 mt-2" id="songContainer">
         <div class="col col-5 d-flex">
-          <span class="align-self-center me-4">2</span>
+          <span class="me-4 number" >2</span>
+          <span id="play">
+            <i class="bi bi-play-fill"></i>
+          </span>
           <div id="track-name" class="d-flex flex-column">
             trackName
-            <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
           </div>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+          <p id="play-number">Numero riproduzioni</p>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
           <p id="track-lenght " class="text-secondary">track-lenght</p>
         </div>
       </div>
-      <div class="row row-cols-3 mt-5">
+      <div class="row row-cols-3 mt-2" id="songContainer">
         <div class="col col-5 d-flex">
-          <span class="align-self-center me-4">3</span>
+          <span class="me-4 number" >3</span>
+          <span id="play">
+            <i class="bi bi-play-fill"></i>
+          </span>
           <div id="track-name" class="d-flex flex-column">
             trackName
-            <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
           </div>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+          <p id="play-number">Numero riproduzioni</p>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
           <p id="track-lenght " class="text-secondary">track-lenght</p>
         </div>
       </div>
-      <div class="row row-cols-3 mt-5">
+      <div class="row row-cols-3 mt-2 song" id="songContainer">
         <div class="col col-5 d-flex">
-          <span class="align-self-center me-4">4</span>
+          <span class="me-4 number" >4</span>
+          <span id="play">
+            <i class="bi bi-play-fill"></i>
+          </span>
           <div id="track-name" class="d-flex flex-column">
             trackName
-            <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
           </div>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+          <p id="play-number">Numero riproduzioni</p>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
           <p id="track-lenght " class="text-secondary">track-lenght</p>
         </div>
       </div>
-      <div class="row row-cols-3 mt-5">
+      <div class="row row-cols-3 mt-2 song" id="songContainer">
         <div class="col col-5 d-flex">
-          <span class="align-self-center me-4">5</span>
+          <span class="me-4 number" >5</span>
+          <span id="play">
+            <i class="bi bi-play-fill"></i>
+          </span>
           <div id="track-name" class="d-flex flex-column">
             trackName
-            <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
           </div>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="play-number" class="text-secondary">Numero riproduzioni</p>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="track-lenght " class="text-secondary">track-lenght</p>
-        </div>
-      </div>
-      <div class="row row-cols-3 mt-5">
-        <div class="col col-5 d-flex">
-          <span class="align-self-center me-4">6</span>
-          <div id="track-name" class="d-flex flex-column">
-            trackName
-            <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
-          </div>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="play-number" class="text-secondary">Numero riproduzioni</p>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="track-lenght " class="text-secondary">track-lenght</p>
-        </div>
-      </div>
-      <div class="row row-cols-3 mt-5">
-        <div class="col col-5 d-flex">
-          <span class="align-self-center me-4">7</span>
-          <div id="track-name" class="d-flex flex-column">
-            trackName
-            <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
-          </div>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="play-number" class="text-secondary">Numero riproduzioni</p>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="track-lenght " class="text-secondary">track-lenght</p>
-        </div>
-      </div>
-      <div class="row row-cols-3 mt-5">
-        <div class="col col-5 d-flex">
-          <span class="align-self-center me-4">8</span>
-          <div id="track-name" class="d-flex flex-column">
-            trackName
-            <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
-          </div>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+          <p id="play-number">Numero riproduzioni</p>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
           <p id="track-lenght " class="text-secondary">track-lenght</p>
         </div>
       </div>
     </div>
-
+    <!-- sezione 2 -->
+    <article class="mt-4 container usciteContainer">
+      <div class="uscite"><span>Uscite popolari</span></div>
+      <div class="row row-cols-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-between">
+        <div class="card col p-3 p-0 playing-card" style="width: 9rem">
+          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+            <p class="card-text text-secondary">
+              Some quick example text to build on the card title
+            </p>
+          </div>
+        </div>
+        <div class="card col p-3 p-0 playing-card" style="width: 9rem">
+          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+            <p class="card-text text-secondary">
+              Some quick example text to build on the card title
+            </p>
+          </div>
+        </div>
+        <div class="card col p-3 p-0 playing-card" style="width: 9rem" id="thirdToGo">
+          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+            <p class="card-text text-secondary">
+              Some quick example text to build on the card title
+            </p>
+          </div>
+        </div>
+        <div class="card col p-3 p-0 playing-card" style="width: 9rem" id="secondToGo">
+          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+            <p class="card-text text-secondary">
+              Some quick example text to build on the card title
+            </p>
+          </div>
+        </div>
+        <div class="card col p-3 p-0 playing-card" style="width: 9rem" id="firstToGo">
+          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+            <p class="card-text text-secondary">
+              Some quick example text to build on the card title
+            </p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </article>
   </main>
   <aside id="friendsList" class="d-flex flex-column d-none d-xl-block">
     <div class="d-flex justify-content-between align-items-center">
@@ -396,6 +423,7 @@
   <script src="./assets/script/index.js"></script>
   <script src="./assets/script/playlist.js"></script>
   <script src="./assets/script/artist.js"></script>
+  <script src="./assets/script/songContainer.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
