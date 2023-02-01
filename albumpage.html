@@ -14,7 +14,7 @@
 
 <body class="d-flex">
 
-    <navbar class="d-lg-block d-md-none">
+    <navbar class="d-none d-lg-block">
         <div class="logo">
           <svg viewBox="0 0 1134 340" class="spotylogo">
             <title>Spotify</title>
@@ -76,34 +76,270 @@
           </ul>
         </div>
     </navbar>
-    <main>
-      <div class="d-flex justify-content-between mt-4 mb-5">
-        <div>
-          <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
-            &#60;
-          </button>
-          <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
-            &#62;
-          </button>
+      <!-- Ids=
+      1-article= showcase-card-top
+      2-img div id= showcase-card
+      3-img id=album-cover
+      4-album id= album-title
+      <spans>
+      5-artist id= artist-name
+      6-anno uscita album=album-year
+      7-numero tracks=track-number
+      8-track runtime=track-time -->
+    <main class="">
+      <article class="" id="showcase-card-top">
+        <div class="container d-flex justify-content-between mt-4 mb-5">
+          <div>
+            <button
+              class="btn-forward_backward text-secondary border border-0 rounded-circle"
+            >
+              &#60;
+            </button>
+            <button
+              class="btn-forward_backward text-secondary border border-0 rounded-circle"
+            >
+              &#62;
+            </button>
+          </div>
+          <span
+            class="rounded-pill account-pill text-white border border-0 dropdown p-2"
+          >
+            <a
+              href="#"
+              class="text-decoration-none dropdown-toggle text-white"
+              data-bs-toggle="dropdown"
+              role="button"
+              aria-expanded="false"
+              ><img src="" />Nautilus`s Hook ...</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading1"
+                  >Account</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading2"
+                  >Profile</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading3"
+                  >Settings</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading4"
+                  >Log Out</a
+                >
+              </li>
+            </ul>
+          </span>
         </div>
-        <span class="rounded-pill account-pill text-white border border-0 dropdown p-2">
-          <a href="#" class="text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" role="button"
-            aria-expanded="false"><img src="" />Nautilus`s Hook ...</a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading1">Account</a>
-            </li>
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading2">Profile</a>
-            </li>
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading3">Settings</a>
-            </li>
-            <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading4">Log Out</a>
-            </li>
-          </ul>
-        </span>
+        <div class="card flex-row border border-0" id="showcase-card">
+          <img
+            class="card-img rounded-0 showcase-img"
+            id="album-cover"
+            src="https://placekitten.com/200/300"
+            alt="Card image cap"
+          />
+          <div class="card-body d-flex justify-content-center flex-column">
+            <h1 class="card-title mb-5 mt-5" id="album-title">
+              Card title (feat. title)
+            </h1>
+            <div>
+              <span id="artist-name">Artist name</span>
+              <span id="album-year">Uscita album</span>
+              <span id="track-number">Numero tracks,</span>
+              <span id="track-time" class="text-secondary"
+                >total tracktime.</span
+              >
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="container mt-3" id="playlist-buttons-container">
+        <div
+          class="mt-4 px-3 d-flex justify-content-start align-items-center gap-4"
+          id="playlist-buttons"
+        >
+          <i class="bi bi-play-circle-fill btn p-0" id="album-playButton"></i>
+          <i
+            class="bi bi-heart playlist-top-buttons btn p-0"
+            id="album-like"
+          ></i>
+          <i
+            class="bi bi-download playlist-top-buttons btn p-0"
+            id="album-download"
+          ></i>
+          <span class="dropdown">
+            <a
+              href="#"
+              class="ms-2 text-decoration-none dropdown-toggle playlist-top-buttons"
+              data-bs-toggle="dropdown"
+              role="button"
+              aria-expanded="false"
+              >. . .</a
+            >
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading5"
+                  >Add to que</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading6"
+                  >Download</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading7"
+                  >Add to playlist</a
+                >
+              </li>
+            </ul>
+          </span>
+        </div>
+        <div class="container mt-4 px-4" id="album-tracklist-container">
+          <div class="row row-cols-3" id="album-legend">
+            <div class="col col-5 d-flex lh-lg">
+              <span class="align-self-center me-3 text-secondary">#</span>
+              <div class="d-flex flex-column text-secondary">Titolo</div>
+            </div>
+            <div
+              class="col col-3 flex-fill justify-content-end d-none d-md-flex"
+            >
+              <p class="text-secondary">Riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p class="text-secondary">track-lenght-icon</p>
+            </div>
+          </div>
+          <!-- inizio album track-list -->
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">1</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div
+              class="col col-3 flex-fill justify-content-end d-none d-md-flex"
+            >
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
+            </div>
+          </div>
+          <!-- fine prima row  -->
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">2</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
+            </div>
+          </div>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">3</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
+            </div>
+          </div>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">4</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
+            </div>
+          </div>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">5</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
+            </div>
+          </div>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">6</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
+            </div>
+          </div>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">7</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
+            </div>
+          </div>
+          <div class="row row-cols-3 mt-5">
+            <div class="col col-5 d-flex">
+              <span class="align-self-center me-4">8</span>
+              <div id="track-name" class="d-flex flex-column">
+                trackName
+                <p id="track-artist" class="mt-3 text-secondary">trackArtist</p>
+              </div>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="play-number" class="text-secondary">Numero riproduzioni</p>
+            </div>
+            <div class="col col-3 flex-fill d-flex justify-content-end">
+              <p id="track-lenght " class="text-secondary">track-lenght</p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <aside id="friendsList" class="d-flex flex-column d-none d-xl-block">
@@ -170,80 +406,56 @@
           </div>
         </div>
     </aside>
-    <footer class="row p-3 fixed-bottom m-0">
-      <div
-        id="divFooterLeft"
-        class="d-flex align-items-center col-3 d-none d-md-flex"
-      >
-        <div id="coverContainer"></div>
-        <div id="songInfoFooter" class="ms-2">
-          <p id="songTitleFooter" class="mb-1">Titolo canzone</p>
-          <p>Nome artista</p>
-        </div>
-        <i class="bi bi-heart fs-6"></i>
-        <i class="bi bi-pip fs-6"></i>
-      </div>
-
-      <div
-        id="divFooterCenter"
-        class="d-flex justify-content-center align-items-center col-6"
-      >
-        <div id="playerBarFooter">
-          <div class="d-flex justify-content-center align-items-center">
-            <i class="bi bi-shuffle fs-5 mx-3"></i>
-            <i class="bi bi-skip-start-fill fs-5 mx-3"></i>
-            <i
-              class="bi bi-play-circle-fill fs-2 text-center mx-3"
-              id="playerPlay"
-            ></i>
-            <i class="bi bi-skip-end-fill fs-5 m-3"></i>
-            <i class="bi bi-repeat fs-5 mx-3"></i>
+    <footer class="row p-2">
+        <div id="divFooterLeft" class="d-flex align-items-center col-3">
+          <div id="coverContainer"></div>
+          <div id="songInfoFooter" class="ms-2">
+            <p id="songTitleFooter" class="mb-1">Titolo canzone</p>
+            <p>Nome artista</p>
           </div>
-          <div>
-            <figure>
-              <audio src="/media/cc0-audio/t-rex-roar.mp3">
-                <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
-              </audio>
-            </figure>
+          <i class="bi bi-heart fs-6"></i>
+          <i class="bi bi-pip fs-6"></i>
+        </div>
+    
+        <div id="divFooterCenter" class="d-flex justify-content-center align-items-center col-6">
+          <div id="playerBarFooter">
+            <div class="d-flex justify-content-center align-items-center">
+              <i class="bi bi-shuffle fs-5 mx-3"></i>
+              <i class="bi bi-skip-start-fill fs-5 mx-3"></i>
+              <i class="bi bi-play-circle-fill fs-2 text-center mx-3"></i>
+              <i class="bi bi-skip-end-fill fs-5 m-3"></i>
+              <i class="bi bi-repeat fs-5 mx-3"></i>
+            </div>
+            <div>
+              <figure>
+                <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
+                  <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
+                </audio>
+              </figure>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div
-        id="buttonFooter "
-        class="d-flex justify-content-end flex-nowrap align-items-center col-3 d-none d-md-flex"
-      >
-        <i class="bi bi-mic fs-6"></i>
-        <i class="bi bi-list fs-6"></i>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-display fs-6"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M10.67,16.67c0,1.11,.87,2,2,2h5.33c1.13,0,2-.89,2-2V7.33c0-1.11-.87-2-2-2h-5.33c-1.13,0-2,.89-2,2v9.33Zm2,.67c-.4,0-.67-.3-.67-.67V7.33c0-.37,.27-.67,.67-.67h5.33c.4,0,.67,.3,.67,.67v9.33c0,.37-.27,.67-.67,.67h-5.33Z"
-            class="c"
-          />
-          <path
-            d="M16.13,8.83c0-.46-.33-.83-.8-.83s-.8,.37-.8,.83,.33,.83,.8,.83,.8-.37,.8-.83Z"
-            class="c"
-          />
-          <path
-            d="M15.33,14.67c-.53,0-1-.45-1-1s.47-1,1-1,1,.45,1,1-.47,1-1,1Zm-2.33-1c0,1.29,1.07,2.33,2.33,2.33s2.33-1.05,2.33-2.33-1.07-2.33-2.33-2.33-2.33,1.05-2.33,2.33Z"
-            class="c"
-          />
-          <path
-            d="M4,6.67c0-.73,.6-1.33,1.33-1.33h3.33v1.33h-3.33v7.33h3.33v1.33h-3.33c-.73,0-1.33-.6-1.33-1.33V6.67Zm4.67,12h-2v-1.33h2v1.33Z"
-            class="c"
-          />
-        </svg>
-        <i class="bi bi-volume-up"></i>
-        <input type="range" class="form-range" id="customRange1" />
-        <i class="bi bi-arrows-angle-expand fs-6"></i>
-      </div>
+    
+        <div id="buttonFooter " class="d-flex justify-content-end flex-nowrap align-items-center col-3">
+          <i class="bi bi-mic fs-6"></i>
+          <i class="bi bi-list fs-6"></i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display fs-6"
+            viewBox="0 0 24 24">
+            <path
+              d="M10.67,16.67c0,1.11,.87,2,2,2h5.33c1.13,0,2-.89,2-2V7.33c0-1.11-.87-2-2-2h-5.33c-1.13,0-2,.89-2,2v9.33Zm2,.67c-.4,0-.67-.3-.67-.67V7.33c0-.37,.27-.67,.67-.67h5.33c.4,0,.67,.3,.67,.67v9.33c0,.37-.27,.67-.67,.67h-5.33Z"
+              class="c" />
+            <path d="M16.13,8.83c0-.46-.33-.83-.8-.83s-.8,.37-.8,.83,.33,.83,.8,.83,.8-.37,.8-.83Z" class="c" />
+            <path
+              d="M15.33,14.67c-.53,0-1-.45-1-1s.47-1,1-1,1,.45,1,1-.47,1-1,1Zm-2.33-1c0,1.29,1.07,2.33,2.33,2.33s2.33-1.05,2.33-2.33-1.07-2.33-2.33-2.33-2.33,1.05-2.33,2.33Z"
+              class="c" />
+            <path
+              d="M4,6.67c0-.73,.6-1.33,1.33-1.33h3.33v1.33h-3.33v7.33h3.33v1.33h-3.33c-.73,0-1.33-.6-1.33-1.33V6.67Zm4.67,12h-2v-1.33h2v1.33Z"
+              class="c" />
+          </svg>
+          <i class="bi bi-volume-up"></i>
+          <input type="range" class="form-range" id="customRange1" />
+          <i class="bi bi-arrows-angle-expand fs-6"></i>
+        </div>
     </footer>
 
 

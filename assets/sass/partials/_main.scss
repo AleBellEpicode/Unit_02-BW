@@ -36,7 +36,7 @@ a {
   background-color: $bg-black;
 }
 #showcase-card {
-  background: rgb(0, 0, 0);
+  background: $bg-black;
   background: linear-gradient(
     18deg,
     rgba(0, 0, 0, 1) 0%,
@@ -81,6 +81,10 @@ a {
 .bi-play-circle-fill {
   color: $bg-green;
   visibility: hidden;
+}
+.bi-play-circle-fill::before {
+  background-color: #000;
+  border-radius: 50px;
 }
 .playing-card:hover {
   background-color: $bg-hover;
