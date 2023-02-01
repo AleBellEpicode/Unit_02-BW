@@ -1,5 +1,4 @@
-
-navbar{
+navbar {
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -7,54 +6,53 @@ navbar{
   height: 100%;
   margin: 0;
   padding: 0;
-  
-  .logo{
-    color:white;
+
+  .logo {
+    color: white;
     margin-bottom: 18px;
     padding-right: 24px;
     padding-left: 24px;
     padding-top: 24px;
-    .spotylogo{
+    .spotylogo {
       height: 40px;
       max-width: 131px;
       width: 100%;
     }
   }
-  ul{
+  ul {
     list-style: none;
     padding: 0;
-    li{
+    li {
       padding: 0 8px;
-      a{
+      a {
         text-decoration: none;
-        color:rgb(179, 179, 179);
+        color: rgb(179, 179, 179);
         font-size: 0.9em;
         display: flex;
         align-items: center;
         cursor: pointer;
         gap: 16px;
-        height: 40px;   
+        height: 40px;
         padding: 0 16px;
-        i{
+        i {
           font-size: 1.5em;
         }
       }
-      a:hover{
+      a:hover {
         color: white;
       }
-      a:active{
+      a:active {
         color: white;
       }
     }
   }
-  .playlist{
+  .playlist {
     margin-top: 24px;
-    height: 100%;
     z-index: 2;
-    #playlist-input{
+    #playlist-input {
       display: none;
       justify-content: center;
-      #playlist-name-input{
+      #playlist-name-input {
         width: 60%;
         color: white;
         background-color: black;
@@ -62,7 +60,7 @@ navbar{
         border-radius: 5px;
         margin-right: 8px;
       }
-      #submit-playlist-btn{
+      #submit-playlist-btn {
         color: white;
         background-color: black;
         border: 1px solid white;
@@ -70,24 +68,25 @@ navbar{
         font-size: 14px;
       }
     }
-    #playlist-name-display{
+    #playlist-name-display {
       color: rgb(179, 179, 179);
       padding: 5px 20px;
       line-height: 20px;
-      overflow-y:auto;
+      overflow-y: scroll;
+      max-height: calc(100vh - 550px);
     }
-    #playlist-name-display a:hover{
+    #playlist-name-display a:hover {
       color: white;
     }
-    #playlist-name-display a:active{
+    #playlist-name-display a:active {
       color: white;
     }
-    ul{
+    ul {
       list-style: none;
       padding: 0;
       li {
         padding: 0 8px;
-        a{
+        a {
           text-decoration: none;
           color: rgb(179, 179, 179);
           font-size: 0.9em;
@@ -95,38 +94,37 @@ navbar{
           align-items: center;
           cursor: pointer;
           gap: 16px;
-          height: 40px;   
+          height: 40px;
           padding: 0 16px;
-          i{
+          i {
             font-size: 1.5em;
           }
-          .bi-plus{
+          .bi-plus {
             color: black;
             background-color: rgb(198, 197, 197);
           }
-          
-        }    
-        a:hover{
+        }
+        a:hover {
           color: white;
         }
-        a:active{
+        a:active {
           color: white;
         }
       }
     }
   }
-  .links{
+  .links {
     margin-top: 32px;
-    margin-bottom: 70px;   //modificabile perchè il footer da problemi
+    margin-bottom: 70px; //modificabile perchè il footer da problemi
     padding: 0 24px;
     text-align: start;
     position: fixed;
     bottom: 1vh;
     z-index: 1;
-    li{
+    li {
       padding: 0px;
     }
-    a{
+    a {
       text-decoration-line: none;
       margin-bottom: 8px;
       margin-right: 16px;
