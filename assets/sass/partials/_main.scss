@@ -127,24 +127,23 @@ a {
   border: 3px solid rgb(124, 123, 123);
 }
 #firstToGo {
-  @media screen and(max-width: 1245px) {
+  @media screen and(max-width: 1460px) {
     display: none;
   }
 }
 
 #secondToGo {
-  @media screen and(max-width: 870px) {
+  @media screen and(max-width: 1240px) {
     display: none;
   }
 }
 #thirdToGo {
-  @media screen and(max-width: 720px) {
+  @media screen and(max-width: 767px) {
     display: none;
   }
 }
-#runAndHide,
-#runAndHide2 {
-  @media screen and (max-width: 1762px) {
-    display: none !important;
+.playing-card {
+  @media screen and(max-width: 767px) {
+    width: 13rem !important;
   }
 }
