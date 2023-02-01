@@ -5,12 +5,17 @@ main {
   overflow-y: scroll;
   margin-left: auto;
   display: flex;
-  align-items: center;
   flex-direction: column;
   margin-bottom: 100px;
 }
+#home-main {
+  align-items: center;
+}
 a {
   text-decoration: none;
+}
+p > a {
+  color: rgb(155, 153, 153);
 }
 .card,
 .btn-save {
