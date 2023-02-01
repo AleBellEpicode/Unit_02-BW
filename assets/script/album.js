@@ -57,9 +57,9 @@ const renderTrackList = (track, i) => {
    let trackList = document.querySelector('#album-tracklist-container');
    let trackLenght = track.duration
    trackList.innerHTML += `
-       <div class="row row-cols-3 mt-5" song-id="${track.id}" onclick=setPlayer(event)>
+       <div class="row row-cols-3 mt-5" song-id="${track.id}">
           <div class="col col-5 d-flex">
-            <span class="align-self-center me-4">${i}</span>
+            <span class="align-self-center me-4" onclick=setPlayer(event)>${i}</span>
             <div id="track-name" class="d-flex flex-column">
               ${track.title_short}
               <p id="track-artist" class="mt-3 text-secondary">${track.artist.name}</p>
