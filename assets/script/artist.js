@@ -49,3 +49,5 @@ const renderRelatedAlbums = (album) => {
    let artistOther = document.querySelector('#otherAlbums')
    artistOther.innerHTML += `<p album-id="${album.id}">${album.title}</p>`
 }
+
+
