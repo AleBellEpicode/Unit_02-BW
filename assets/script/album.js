@@ -26,9 +26,13 @@ window.onload = async () => {
          renderTrackList(data.tracks.data[i], i + 1)
          durationCounter += data.tracks.data[i].duration
       }
+      //calcola la durata complessiva dell'album
       let totalTrackTime = document.querySelector('#track-time')
       totalTrackTime.innerHTML = durationFormat(durationCounter)
-      console.log(durationCounter)
+      //imposta come playbutton la prima traccia dell'album
+      let albumPlay = document.querySelector('#album-playButton')
+      albumPlay.setAttribute('onclick', 'setPlayer(event)')
+      albumPlay.setAttribute('song-id', data.tracks.data[0].id)
       //altri album dell'artista
       otherAlbums(data.artist.name)
    } catch (err) {
@@ -38,7 +42,6 @@ window.onload = async () => {
 }
 
 const otherAlbums = async (artist) => {
-   console.log(artist)
    try {
       let res = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`)
       let { data: songs } = await res.json()
@@ -57,9 +60,9 @@ const renderTrackList = (track, i) => {
    let trackList = document.querySelector('#album-tracklist-container');
    let trackLenght = track.duration
    trackList.innerHTML += `
-       <div class="row row-cols-3 mt-5" song-id="${track.id}">
+       <div class="row row-cols-3 mt-5">
           <div class="col col-5 d-flex">
-            <span class="align-self-center me-4" onclick=setPlayer(event)>${i}</span>
+            <span class="align-self-center me-4" song-id="${track.id}" onclick=setPlayer(event)>${i}</span>
             <div id="track-name" class="d-flex flex-column">
               ${track.title_short}
               <p id="track-artist" class="mt-3 text-secondary">${track.artist.name}</p>
