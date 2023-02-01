@@ -17,23 +17,10 @@ submitPlaylistBtn.addEventListener("click", function () {
 
     let playlistDiv = document.createElement("div");
 
-    let playlistId = JSON.parse(localStorage.getItem("playlists"))
-
-    if (playlistId !== null) {
-
-        newPlaylistId = playlistId.length + 1
-
-    } else {
-        newPlaylistId = 1
-    }
-
-
-    playlistDiv.id = newPlaylistId
-
     playlistDiv.appendChild(playlistLink);
 
     playlistNameDisplay.appendChild(playlistDiv);
 
-    localStorage.setItem('playlists', JSON.stringify([{ id: newPlaylistId, name: playlistName, songs: [] }]));
+    localStorage.setItem(JSON.stringify( playlistName, playlistName));
 });
 
