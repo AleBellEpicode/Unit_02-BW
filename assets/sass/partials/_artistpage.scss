@@ -48,4 +48,54 @@
             }
         }
     }
+    .following{
+        color: white;
+        font-weight: bold;
+        background-color: transparent;
+        border: 1px solid white;
+        line-height: 25px;
+        border-radius: 5px;
+    }
+}
+#popolari-tracklist-container{
+    margin: 0;
+    max-width: 1955px;
+    @media screen and (min-width: 1024px){
+        padding: 0 32px;
+    }
+    .popolari{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    #songContainer{
+        border: 1px solid transparent;
+        border-radius: 4px;
+        height: 56px;
+        position: relative;
+        gap: 16px;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        #play{
+            display: none;
+            margin-right: 0.86rem;
+        }
+    }
+    #songContainer:hover{
+        background-color: hsla(0,0%,100%,.1);
+    }
+    .other{
+        padding: 0 16px;
+    }
+   
+}
+.usciteContainer{
+    @media screen and (min-width: 1024px){
+        padding: 0 32px;
+    }
+    .uscite{
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
 }
