@@ -3,6 +3,10 @@ body {
 }
 main {
   overflow-y: scroll;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 a {
   text-decoration: none;
@@ -64,14 +68,23 @@ a {
 }
 .playlist-main-card {
   min-width: 250px;
-  max-width: 385px;
+  max-width: 32%;
   border-radius: 0px;
-}
-#middleShowcase {
-  @media screen and(max-width:768px) {
-    justify-content: center !important;
+  @media screen and(max-width:1273px) {
+    width: 47%;
+    max-width: unset;
+  }
+  @media screen and(max-width:549px) {
+    width: 98%;
+    max-width: unset;
   }
 }
+
+/* #middleShowcase {
+  @media screen and(max-width:1593px) {
+    justify-content: center !important;
+  }
+} */
 .playlist-main-img {
   aspect-ratio: 1/1;
   object-fit: cover;
