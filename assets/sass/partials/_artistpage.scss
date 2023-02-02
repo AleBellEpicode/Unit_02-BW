@@ -1,112 +1,113 @@
-.artist-main{
-    background: $bg-black-gradient;
+.artist-main {
+  background: $bg-black-gradient;
 }
 
-#img{
-    background-image:url("/assets/img/ab67618600001016d0800cc68aa7528b5ac0aba3.jpeg");
-    background-size: cover;
-    height: 40vh;
+.shadowartist {
+  text-shadow: 3px 3px 15px black;
+}
+
+#img {
+  background-image: url("/assets/img/ab67618600001016d0800cc68aa7528b5ac0aba3.jpeg");
+  background-size: cover;
+  height: 40vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .hero-section {
+    padding: 0 32px 24px 32px;
+    .verifield {
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      i {
+        color: rgb(30, 98, 234);
+        font-size: 1.2rem;
+        margin-right: 2px;
+      }
+    }
+    .name-artist {
+      font-size: 6rem;
+      letter-spacing: -4px;
+    }
+  }
+}
+
+.more-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px 24px;
+  max-width: 1955px;
+  padding: 0 16px;
+  .barra-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    #play {
+      box-sizing: border-box;
+      font-size: 1.125rem;
+      font-weight: 700;
+      border-radius: 50px;
+      i {
+        background-color: green;
+      }
+    }
+  }
+  .following {
     color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    .hero-section{
-        padding: 0 32px 24px 32px;
-        .verifield{
-            font-size: 0.875rem;
-            display: flex;
-            align-items: center;
-            i{
-                color: rgb(30, 98, 234);
-                font-size: 1.2rem;
-                margin-right: 2px;
-            }
-        }
-        .name-artist{
-            font-size: 6rem;
-            letter-spacing: -4px;
-
-        }
-    }
-   
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid white;
+    line-height: 25px;
+    border-radius: 5px;
+  }
 }
-.more-buttons{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px 24px;
-    max-width: 1955px;
-    padding: 0 16px;
-    .barra-buttons{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
-        #play{
-            box-sizing: border-box;
-            font-size: 1.125rem;
-            font-weight: 700;
-            border-radius: 50px;
-            i{
-                background-color:green;
-            }
-        }
-    }
-    .following{
-        color: white;
-        font-weight: bold;
-        background-color: transparent;
-        border: 1px solid white;
-        line-height: 25px;
-        border-radius: 5px;
-    }
-}
-#popolari-tracklist-container{
-    margin: 0;
-    max-width: 1955px;
-    @media screen and (min-width: 1024px){
-        padding: 0 32px;
-    }
-    .popolari{
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-    #songContainer{
-        border: 1px solid transparent;
-        border-radius: 4px;
-        height: 56px;
-        position: relative;
-        gap: 16px;
-        display: flex;
-        align-items: center;
-        padding: 0 16px;
-        #play{
-            display: none;
-            margin-right: 0.86rem;
-        }
-    }
-    #songContainer:hover{
-        background-color: hsla(0,0%,100%,.1);
-    }
-    .other{
-        padding: 0 16px;
-    }
-   
-}
-.usciteContainer{
-    margin-bottom: 50px;
-    @media screen and (min-width: 1024px){
-        padding: 0 32px;
-    }
-    
-}
-.uscite{
+#popolari-tracklist-container {
+  margin: 0;
+  max-width: 1955px;
+  @media screen and (min-width: 1024px) {
+    padding: 0 32px;
+  }
+  .popolari {
     font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 20px;
-    padding-left: 12px;
-    margin-top: 15px;
-    @media screen and (min-width: 1024px){
-        padding: 0 32px;
+  }
+  #songContainer {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    height: 56px;
+    position: relative;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    #play {
+      display: none;
+      margin-right: 0.86rem;
     }
+  }
+  #songContainer:hover {
+    background-color: hsla(0, 0%, 100%, 0.1);
+  }
+  .other {
+    padding: 0 16px;
+  }
+}
+.usciteContainer {
+  margin-bottom: 50px;
+  @media screen and (min-width: 1024px) {
+    padding: 0 32px;
+  }
+}
+.uscite {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  margin-top: 15px;
+  @media screen and (min-width: 1024px) {
+    padding: 0 32px;
+  }
 }
