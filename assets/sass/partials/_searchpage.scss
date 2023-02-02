@@ -102,7 +102,7 @@
     }
     .cardArtist{
         @media screen and (max-width: 992px) {
-            width: 85vw;
+            width: 75vw;
         }
     }
     .cardArtist:hover{
@@ -135,4 +135,15 @@
         }
     }
     
+}
+.resultAlbum{
+    margin-top: 20px;
+    .container-title{
+        display: flex;
+        margin-bottom: 16px;
+        .title-search-page{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
 }
