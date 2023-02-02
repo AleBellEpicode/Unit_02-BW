@@ -31,13 +31,13 @@
       </div>
       <ul>
         <li>
-          <a href="#">
+          <a href="index.html">
             <i class="bi bi-house-door-fill"></i>
             <span>Home</span>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="searchpage.html">
             <i class="bi bi-search"></i>
             <span>Cerca</span>
           </a>
@@ -504,17 +504,28 @@
     </aside>
 
     <footer
-      class="row py-4 fixed-bottom m-0 d-flex justify-content-center align-items-center d-none d-md-flex"
+      class="row py-4 fixed-bottom m-0 d-flex justify-content-center align-items-center flex-column flex-md-row"
     >
-      <div id="divFooterLeft" class="d-flex align-items-center col-3">
-        <div id="coverContainer"></div>
-        <div id="songInfoFooter" class="ms-2 d-none d-md-block">
-          <p id="songTitleFooter" class="mb-1">Titolo canzone</p>
-          <p>Nome artista</p>
+      <div
+        id="divFooterLeft"
+        class="d-md-flex align-items-center col-12 col-md-3"
+      >
+        <div id="coverContainer" class="d-none d-md-block"></div>
+        <div id="songInfoFooter" class="ms-2">
+          <p
+            id="songTitleFooter"
+            class="mb-1 text-center text-md-start d-block"
+          >
+            Titolo canzone
+          </p>
+          <p class="d-none d-md-block">Nome artista</p>
         </div>
-
-        <i class="bi bi-heart fs-6 ms-3 iconsFooter"></i>
-        <i class="bi bi-pip fs-6 ms-3 iconsFooter"></i>
+        <button id="buttonFooter1" class="d-none d-md-block">
+          <i class="bi bi-heart fs-6 ms-3 iconsFooter"></i>
+        </button>
+        <button id="buttonFooter2" class="d-none d-md-block">
+          <i class="bi bi-pip fs-6 ms-3 iconsFooter"></i>
+        </button>
       </div>
 
       <div
@@ -523,14 +534,24 @@
       >
         <div id="playerBarFooter">
           <div class="d-flex justify-content-center align-items-center">
-            <i class="bi bi-shuffle fs-6 mx-2 iconsFooter"></i>
-            <i class="bi bi-skip-start-fill fs-4 mx-2 iconsFooter"></i>
-            <i
-              class="bi bi-play-circle-fill fs-2 text-center mx-2 iconsFooter"
-              id="playerPlay"
-            ></i>
-            <i class="bi bi-skip-end-fill fs-4 mx-2 iconsFooter"></i>
-            <i class="bi bi-repeat fs-6 mx-2 iconsFooter"></i>
+            <button id="buttonFooter3">
+              <i class="bi bi-shuffle fs-6 mx-2 iconsFooter"></i>
+            </button>
+            <button id="buttonFooter4">
+              <i class="bi bi-skip-start-fill fs-4 mx-2 iconsFooter"></i>
+            </button>
+            <button id="buttonFooter5">
+              <i
+                class="bi bi-play-circle-fill fs-2 text-center mx-2 iconsFooter"
+                id="playerPlay"
+              ></i>
+            </button>
+            <button id="buttonFooter6">
+              <i class="bi bi-skip-end-fill fs-4 mx-2 iconsFooter"></i>
+            </button>
+            <button id="buttonFooter7">
+              <i class="bi bi-repeat fs-6 mx-2 iconsFooter"></i>
+            </button>
           </div>
         </div>
         <div class="w-100 d-flex justify-content-center d-none d-md-flex">
@@ -539,11 +560,16 @@
       </div>
 
       <div
-        id="buttonFooter "
+        id="buttonFooterContainer"
         class="d-flex justify-content-end flex-nowrap align-items-center col-3 d-none d-md-flex"
       >
-        <i class="bi bi-mic fs-5 iconsFooter"></i>
-        <i class="bi bi-list fs-5 iconsFooter"></i>
+        <button id="buttonFooter8">
+          <i class="bi bi-mic fs-5 iconsFooter"></i>
+        </button>
+        <button id="buttonFooter9">
+          <i class="bi bi-list fs-5 iconsFooter"></i>
+        </button>
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           id="svgFooter"
@@ -568,7 +594,10 @@
             class="c"
           />
         </svg>
-        <i class="bi bi-volume-up fs-5 iconsFooter"></i>
+
+        <button id="buttonFooter10">
+          <i class="bi bi-volume-up fs-5 iconsFooter"></i>
+        </button>
 
         <input type="range" value="0" min="0" max="30" id="customRange2" />
 
@@ -576,64 +605,9 @@
       </div>
     </footer>
 
-    <div
-      id="FooterMobile"
-      class="d-flex justify-content-center align-items-center"
-    >
-      <div
-        id="footerMobileContainer"
-        class="py-4 px-2 d-flex justify-content-center align-items-center d-block d-md-none"
-      >
-        <div id="coverContainerMobile"></div>
-
-        <p id="songInfoMobile" class="ms-2">Titolo Canone e Nome artista</p>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          id="svgFooter"
-          fill="currentColor"
-          class="bi bi-display"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M10.67,16.67c0,1.11,.87,2,2,2h5.33c1.13,0,2-.89,2-2V7.33c0-1.11-.87-2-2-2h-5.33c-1.13,0-2,.89-2,2v9.33Zm2,.67c-.4,0-.67-.3-.67-.67V7.33c0-.37,.27-.67,.67-.67h5.33c.4,0,.67,.3,.67,.67v9.33c0,.37-.27,.67-.67,.67h-5.33Z"
-            class="c"
-          />
-          <path
-            d="M16.13,8.83c0-.46-.33-.83-.8-.83s-.8,.37-.8,.83,.33,.83,.8,.83,.8-.37,.8-.83Z"
-            class="c"
-          />
-          <path
-            d="M15.33,14.67c-.53,0-1-.45-1-1s.47-1,1-1,1,.45,1,1-.47,1-1,1Zm-2.33-1c0,1.29,1.07,2.33,2.33,2.33s2.33-1.05,2.33-2.33-1.07-2.33-2.33-2.33-2.33,1.05-2.33,2.33Z"
-            class="c"
-          />
-          <path
-            d="M4,6.67c0-.73,.6-1.33,1.33-1.33h3.33v1.33h-3.33v7.33h3.33v1.33h-3.33c-.73,0-1.33-.6-1.33-1.33V6.67Zm4.67,12h-2v-1.33h2v1.33Z"
-            class="c"
-          />
-        </svg>
-        <i class="bi bi-heart fs-4 iconsFooter"></i>
-        <i class="bi bi-play-fill fs-2 iconsFooter"></i>
-      </div>
-    </div>
-    <!-- navbar mobile -->
-    <div class="container-fluid d-flex d-sm-none" id="navbar-mobile">
-      <div class="button-navbar-mobile">
-        <i class="bi bi-house-door-fill"></i>
-        <span>Home</span>
-      </div>
-      <div class="button-navbar-mobile">
-        <i class="bi bi-search"></i>
-        <span>Cerca</span>
-      </div>
-      <div class="button-navbar-mobile">
-        <i class="bi bi-collection"></i>
-        <span>La tua libreria</span>
-      </div>
-    </div>
-
     <script src="./assets/script/index.js"></script>
     <script src="./assets/script/playlist.js"></script>
+    <script src="./assets/script/player.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
