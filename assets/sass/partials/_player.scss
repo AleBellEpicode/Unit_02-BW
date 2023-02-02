@@ -1,6 +1,20 @@
 footer {
   width: 100%;
   background-color: $bg-black;
+
+  #buttonFooter1,
+  #buttonFooter2,
+  #buttonFooter3,
+  #buttonFooter4,
+  #buttonFooter5,
+  #buttonFooter6,
+  #buttonFooter7,
+  #buttonFooter8,
+  #buttonFooter9,
+  #buttonFooter10 {
+    background-color: transparent;
+    border: 0;
+  }
   #coverContainer {
     background-color: orange;
     width: 50px;
@@ -10,9 +24,9 @@ footer {
   #playerBarFooter {
     height: 50px;
   }
-  #buttonFooter {
+  /**#buttonFooterContainer {
     height: 50px;
-  }
+  }**/
 
   #svgFooter {
     width: 1.5em;
@@ -52,10 +66,12 @@ footer {
   width: 100%;
   position: fixed;
   bottom: 7.5em;
+  #buttonFooter {
+  }
 
   #coverContainerMobile {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     background-color: aqua; //colore impostato per prova
     border-radius: 50%;
   }
@@ -66,6 +82,11 @@ footer {
     border-radius: 1.2em;
   }
   #svgFooter {
-    width: 2em;
+    width: 3em;
+    min-width: 3em;
+  }
+
+  .iconsFooterCustom {
+    font-size: 3em;
   }
 }
