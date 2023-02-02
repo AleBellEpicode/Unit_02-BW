@@ -7,7 +7,7 @@ window.onload = async () => {
       let { data: topSongs } = await restop.json()
       let artist = await resartist.json()
       //artista album
-      let artistName = document.querySelector(".name-artist")
+      let artistName = document.querySelector("#artistnameh2")
       artistName.innerHTML = artist.name
       //immagine album
       let artistPic = document.querySelector("#img")
@@ -74,7 +74,7 @@ const renderRelatedAlbums = async (album) => {
       let res = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${album.id}`)
       let fetchedAlbum = await res.json()
       let releaseYear = (new Date(fetchedAlbum.release_date)).getFullYear()
-      let artistOther = document.querySelector('article.usciteContainer > div')
+      let artistOther = document.querySelector('#altrialbum')
       artistOther.innerHTML += `
    <div class="card col p-3 p-0 playing-card" style="width: 9rem" onclick="location.href='albumpage.html?albumId=${album.id}';">
           <img src="${album.cover_medium}" class="card-img-top position-relative" alt="...">
