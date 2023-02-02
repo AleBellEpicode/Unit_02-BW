@@ -13,7 +13,7 @@
 </head>
 
 <body class="d-flex">
-  <navbar class="d-none d-lg-block">
+  <navbar class="d-none d-lg-block ">
     <div class="logo">
       <svg viewBox="0 0 1134 340" class="spotylogo">
         <title>Spotify</title>
@@ -75,18 +75,22 @@
       </ul>
     </div>
   </navbar>
-  <main class="artist-main">
-    <div id="img">
-      <div class="d-flex justify-content-between mt-4 mb-5 px-3">
-        <div>
-          <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
-            &#60;
-          </button>
-          <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
-            &#62;
-          </button>
-        </div>
-        <span class="rounded-pill account-pill text-white border border-0 dropdown p-2">
+  <main class="px-3">
+    <div class="d-flex justify-content-between container px-0 align-items-center sus mx-0">
+      <div class="d-none d-md-flex">
+        <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
+          &#60;
+        </button>
+        <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
+          &#62;
+        </button>
+      </div>
+      <div class="searchBarContainer">
+        <i class="bi bi-search searchIcon"></i>
+        <input type="text" name="" id="searchBar" placeholder="Cosa vuoi ascoltare?">
+      </div>
+      <div class="d-none d-md-flex">
+        <span class=" rounded-pill account-pill text-white border border-0 dropdown p-2">
           <a href="#" class="text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" role="button"
             aria-expanded="false"><img src="" />Nautilus`s Hook ...</a>
           <ul class="dropdown-menu">
@@ -105,59 +109,157 @@
           </ul>
         </span>
       </div>
-      <div class="hero-section container">
-        <div class="verifield shadowartist"><i class="bi bi-patch-check-fill"></i>Artista verificato</div>
-        <h1 id="artistnameh2" class="display-2 fw-bold shadowartist">Nome Artista</h1>
-        <p class="ascolti shadowartist">3 ascoltatori mensili</p>
+    </div>
+    <div class="search-btn-Container">
+      <div>
+        <button class="searchButton">
+          <span>Tutto</span>
+        </button>
+      </div>
+      <div>
+        <button class="searchButton">
+          <span>Brani</span>
+        </button>
+      </div>
+      <div>
+        <button class="searchButton">
+          <span>Album</span>
+        </button>
       </div>
     </div>
-    <!-- sezione 2 -->
-    <article class="mt-4 container usciteContainer">
-      <div class="more-buttons">
-        <div class="px-3 d-flex justify-content-start align-items-center gap-4 play-button" id="playlist-buttons">
-          <i class="bi bi-play-circle-fill btn p-0" id="album-playButton"></i>
-          <button class="following">following</button>
-          <span class="dropdown">
-            <a href="#" class="ms-2  text-white text-decoration-none dropdown-toggle playlist-top-buttons"
-              data-bs-toggle="dropdown" role="button" aria-expanded="false">. . .</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item text-white" href="#scrollspyHeading5">Add to que</a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#scrollspyHeading6">Download</a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#scrollspyHeading7">Add to playlist</a>
-              </li>
-            </ul>
-          </span>
+    <div class="result-section">
+      <div class="rilevantResult">
+        <div class="container-title">
+          <span class="title-search-page">Risultato più rilevante</span>
         </div>
-      </div>
-      <div class="container mt-2" id="popolari-tracklist-container">
-        <div class="popolari">
-          <h4 class="mb-3">Popolari</h4>
-        </div>
-        <div class="row container row-cols-3" id="album-legend">
-          <div class="col col-5 d-flex lh-lg">
-            <span class="align-self-center me-3 text-secondary">#</span>
-            <div class="d-flex flex-column text-secondary">Titolo</div>
+        <div class="cardArtist playing-card">
+          <div class="img-artist-container">
+            <img src="./assets/img/vm93.jpg" alt="" class="w-100 rounded-circle">
           </div>
-          <div class="col col-3 flex-fill justify-content-end d-none d-md-flex">
-            <p class="text-secondary">Riproduzioni</p>
+          <div>
+            <p class="nameArtist">Vincenzo Maiorana</p>
           </div>
-          <div class="col col-3 flex-fill d-flex justify-content-end">
-            <p class="text-secondary"><i class="bi bi-clock"></i></p>
+          <div>
+            <span class="tagArtist">Artista</span>
+          </div>
+          <div class="btn-play-hover">
+            <a class="">
+              <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute playSearchCard"></i>
+            </a>
           </div>
         </div>
-        <!-- POPOLATO DINAMICAMENTE TRACKLIST -->
       </div>
-      <div class="uscite mt-5"><span>Discografia</span></div>
-      <div id="altrialbum" class="row row-cols-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-between">
-        <!-- POPOLATO DINAMICAMENTE TRACKLIST -->
+      <div class="songResult d-none d-lg-block">
+        <div class="container-title">
+          <span class="title-search-page">Brani</span>
+        </div>
+        <div class="songContainer">
+          <div class="number-title-song">
+            <span class="num">1</span>
+            <p>title song</p>
+          </div>
+          <div class="songDuration">
+            <p>duration song</p>
+          </div>
+        </div>
+        <div class="songContainer">
+          <div class="number-title-song">
+            <span class="num">2</span>
+            <p>title song</p>
+          </div>
+          <div class="songDuration">
+            <p>duration song</p>
+          </div>
+        </div>
+        <div class="songContainer">
+          <div class="number-title-song">
+            <span class="num">3</span>
+            <p>title song</p>
+          </div>
+          <div class="songDuration">
+            <p>duration song</p>
+          </div>
+        </div>
+        <div class="songContainer">
+          <div class="number-title-song">
+            <span class="num">4</span>
+            <p>title song</p>
+          </div>
+          <div class="songDuration">
+            <p>duration song</p>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="resultAlbum">
+      <div class="container-title">
+        <span class="title-search-page">Album</span>
       </div>
-    </article>
+      <div class="row row-cols-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-between mx-0 gap-2"
+        id="suggested-playlist">
+        <div class="card col p-3 p-0 playing-card" style="width: 11rem">
+          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+            <p class="card-text text-secondary">
+              Some quick example text to build on the card title
+            </p>
+          </div>
+        </div>
+        <div class="card col p-3 p-0 playing-card" style="width: 11rem">
+          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+            <p class="card-text text-secondary">
+              Some quick example text to build on the card title
+            </p>
+          </div>
+        </div>
+        <div class="card col p-3 p-0 playing-card" style="width: 11rem" id="thirdToGo">
+          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+            <p class="card-text text-secondary">
+              Some quick example text to build on the card title
+            </p>
+          </div>
+        </div>
+        <div class="card col p-3 p-0 playing-card" style="width: 11rem" id="secondToGo">
+          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+            <p class="card-text text-secondary">
+              Some quick example text to build on the card title
+            </p>
+          </div>
+        </div>
+        <div class="card col p-3 p-0 playing-card" style="width: 11rem" id="firstToGo">
+          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">Card title</h6>
+            <p class="card-text text-secondary">
+              Some quick example text to build on the card title
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
   <aside id="friendsList" class="d-flex flex-column d-none d-xl-block">
     <div class="d-flex justify-content-between align-items-center">
@@ -293,7 +395,6 @@
   <script src="./assets/script/playlist.js"></script>
   <script src="./assets/script/artist.js"></script>
   <script src="./assets/script/songContainer.js"></script>
-  <script src="./assets/script/player.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>

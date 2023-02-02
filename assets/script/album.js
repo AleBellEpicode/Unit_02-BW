@@ -10,7 +10,7 @@ window.onload = async () => {
       albumTitle.innerHTML = data.title
       //artista album
       let artistName = document.querySelector("#artist-name")
-      artistName.innerHTML = `<a href="artistpage.html?artistID=${data.artist.id}">${data.artist.name}</a>`
+      artistName.innerHTML = `<a href="artistpage.html?artistId=${data.artist.id}">${data.artist.name}</a>`
       //immagine album
       let albumImg = document.querySelector("#album-cover")
       albumImg.src = data.cover_big
@@ -45,7 +45,7 @@ const otherAlbums = async (artist) => {
    try {
       let res = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`)
       let { data: songs } = await res.json()
-      let artistOther = document.querySelector('#otherAlbums > h2')
+      let artistOther = document.querySelector('#otherAboutHim')
       artistOther.innerHTML += songs[0].artist.name
       songs.length < 4 ? limitAlbums = songs.length : limitAlbums = 4
       for (let i = 0; i < limitAlbums; i++) {
@@ -65,7 +65,7 @@ const renderTrackList = (track, i) => {
             <span class="align-self-center me-4" song-id="${track.id}" onclick=setPlayer(event)>${i}</span>
             <div id="track-name" class="d-flex flex-column">
               ${track.title_short}
-              <p id="track-artist" class="mt-3 text-secondary"><a href="artistpage.html?artistID=${track.artist.id}">${track.artist.name}</a></p>
+              <p id="track-artist" class="mt-3 text-secondary"><a href="artistpage.html?artistId=${track.artist.id}">${track.artist.name}</a></p>
             </div>
           </div>
           <div class="col col-3 flex-fill justify-content-end d-none d-md-flex">
@@ -77,9 +77,24 @@ const renderTrackList = (track, i) => {
       </div>`
 }
 
-const renderRelatedAlbums = (album) => {
-   let artistOther = document.querySelector('#otherAlbums')
-   artistOther.innerHTML += `<p album-id="${album.id}">${album.title}</p>`
+const renderRelatedAlbums = async (album) => {
+   let artistOther = document.querySelector('#suggested-playlist')
+   let resAlbum = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${album.id}`)
+   let fetchedAlbum = await resAlbum.json()
+   let releaseYear = (new Date(fetchedAlbum.release_date)).getFullYear()
+   artistOther.innerHTML += `
+           <div class="card col p-3 p-0 playing-card" style="width: 11rem" album-id="${album.id}" onclick="location.href='albumpage.html?albumId=${album.id}';">
+          <img src="${album.cover_big}" class="card-img-top position-relative" alt="...">
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute" album-id="${album.id}" onclick="setPlayer(event)"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">${album.title}</h6>
+            <p class="card-text text-secondary">
+              ${releaseYear} &#183; Album
+            </p>
+          </div>
+        </div><p ></p>`
 }
 
 const durationFormat = (duration) => {
