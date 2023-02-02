@@ -8,6 +8,11 @@ main {
   flex-direction: column;
   margin-bottom: 100px;
 }
+/* main {
+  @media screen and(max-width:576px) {
+    margin-bottom: 220px;
+  }
+} */
 #home-main {
   align-items: center;
   background: $bg-black-gradient;
@@ -42,6 +47,36 @@ p > a {
   object-fit: cover;
   object-position: center;
   width: 200px;
+  @media screen and(max-width:575px) {
+    width: 150px;
+    height: 150px;
+  }
+  @media screen and(max-width:327px) {
+    width: 125px;
+    height: 125px;
+  }
+}
+.showcase-title,
+.showcase-text {
+  @media screen and(max-width:575px) {
+    font-size: x-small;
+  }
+}
+.showcase-text {
+  @media screen and(max-width:575) {
+    color: grey !important;
+  }
+}
+.showcase-pills {
+  @media screen and(max-width:575px) {
+    min-width: 50px !important;
+    font-size: x-small;
+  }
+}
+#hide-sm {
+  @media screen and(max-width:575px) {
+    display: none !important;
+  }
 }
 .btn-forward_backward {
   background-color: $bg-black;
@@ -74,19 +109,25 @@ p > a {
   background-color: #3e3e3e;
 }
 .playlist-main-card {
-  min-width: 250px;
+  min-width: 135px;
   max-width: 32%;
   border-radius: 0px;
-  @media screen and(max-width:1273px) {
+  /*     @media screen and(max-width:1273px) {
     width: 47%;
     max-width: unset;
+  } */
+  @media screen and(max-width:576px) {
+    font-size: small;
   }
-  @media screen and(max-width:549px) {
-    width: 98%;
-    max-width: unset;
+  @media screen and(max-width:454px) {
+    max-width: 49%;
   }
 }
-
+.myplaylist-text {
+  @media screen and (max-width: 454px) {
+    font-size: x-small;
+  }
+}
 /* #middleShowcase {
   @media screen and(max-width:1593px) {
     justify-content: center !important;
@@ -97,6 +138,9 @@ p > a {
   object-fit: cover;
   object-position: center;
   width: 59px;
+  @media screen and(max-width:540px) {
+    width: 45px;
+  }
 }
 .bi-play-circle-fill {
   color: $bg-green;
@@ -104,7 +148,10 @@ p > a {
 }
 .bi-play-circle-fill::before {
   background-color: #000;
-  border-radius: 50px;
+  border-radius: 50%;
+}
+.bi-play-circle-fill::before:hover {
+  box-shadow: 2px 2px 15px black;
 }
 .playing-card:hover {
   background-color: $bg-hover;
@@ -144,13 +191,19 @@ p > a {
     display: none;
   }
 }
-#thirdToGo {
+/* #thirdToGo {
   @media screen and(max-width: 767px) {
     display: none;
   }
-}
+} */
 .playing-card {
   @media screen and(max-width: 767px) {
     width: 13rem !important;
+  }
+}
+#suggested-playlist {
+  @media screen and (max-width: 1460px) {
+    overflow-x: scroll;
+    flex-wrap: nowrap;
   }
 }
