@@ -190,6 +190,14 @@ p > a {
     animation-name: buttonShow;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
+    @media screen and (max-width: 768px) {
+      font-size: 30px !important;
+      top: 21%;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 25px !important;
+      top: 20%;
+    }
   }
   .suggestedPlaylist-playButton {
     visibility: visible;
@@ -203,6 +211,7 @@ p > a {
     animation-timing-function: ease-out;
   }
 }
+
 *::-webkit-scrollbar {
   width: 9px;
 }
