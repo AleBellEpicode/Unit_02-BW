@@ -12,7 +12,7 @@
   <title>Spotify Clone</title>
 </head>
 <body class="d-flex">
-    <navbar class="d-none d-lg-block">
+    <navbar class="d-none d-lg-block ">
         <div class="logo">
           <svg viewBox="0 0 1134 340" class="spotylogo">
             <title>Spotify</title>
@@ -75,8 +75,8 @@
         </div>
     </navbar>
     <main class="px-3">
-        <div class="d-none d-md-flex justify-content-between container px-0 align-items-center sus">
-            <div>
+        <div class= "d-flex justify-content-between container px-0 align-items-center sus mx-0">
+            <div class="d-none d-md-flex">
               <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
                 &#60;
               </button>
@@ -84,28 +84,30 @@
                 &#62;
               </button>
             </div>
-            <div>
-                <i class="bi bi-search searchIcon"></i>
-                <input type="text" name="" id="searchBar" placeholder="Cosa vuoi ascoltare?">
+            <div class="searchBarContainer">
+              <i class="bi bi-search searchIcon"></i>
+              <input type="text" name="" id="searchBar" placeholder="Cosa vuoi ascoltare?">
             </div>
-            <span class="rounded-pill account-pill text-white border border-0 dropdown p-2">
-              <a href="#" class="text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" role="button"
-                aria-expanded="false"><img src="" />Nautilus`s Hook ...</a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item text-white" href="#scrollspyHeading1">Account</a>
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="#scrollspyHeading2">Profile</a>
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="#scrollspyHeading3">Settings</a>
-                </li>
-                <li>
-                  <a class="dropdown-item text-white" href="#scrollspyHeading4">Log Out</a>
-                </li>
-              </ul>
-            </span>
+            <div class="d-none d-md-flex">
+              <span class=" rounded-pill account-pill text-white border border-0 dropdown p-2">
+                <a href="#" class="text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" role="button"
+                  aria-expanded="false"><img src="" />Nautilus`s Hook ...</a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item text-white" href="#scrollspyHeading1">Account</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white" href="#scrollspyHeading2">Profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white" href="#scrollspyHeading3">Settings</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-white" href="#scrollspyHeading4">Log Out</a>
+                  </li>
+                </ul>
+              </span>
+            </div>
         </div>
         <div class="search-btn-Container">
             <div>
@@ -125,25 +127,67 @@
             </div>
         </div>
         <div class="result-section">
-            <div class="rilevantResult">
-                <div class="container-title">
-                    <span class="title-search-page">Risultato più rilevante</span>
-                </div>
-                <div class="cardArtist">
-                    <div class="img-artist-container">
-                        <img src="./assets/img/vm93.jpg" alt="" class="w-100 rounded-circle">
-                    </div>
-                    <div>
-                        <p class="nameArtist">Vincenzo Maiorana</p>
-                    </div>
-                    <div>
-                        <span class="tagArtist">Artista</span>
-                    </div>
-                    <!-- <div class="btn-play-hover">
-                        qui ci sta il bottone
-                    </div> -->
-                </div>
+          <div class="rilevantResult">
+            <div class="container-title">
+              <span class="title-search-page">Risultato più rilevante</span>
             </div>
+            <div class="cardArtist">
+              <div class="img-artist-container">
+                <img src="./assets/img/vm93.jpg" alt="" class="w-100 rounded-circle">
+              </div>
+              <div>
+                <p class="nameArtist">Vincenzo Maiorana</p>
+              </div>
+              <div>
+                <span class="tagArtist">Artista</span>
+              </div>
+         <!-- <div class="btn-play-hover">
+                qui ci sta il bottone
+              </div> -->
+            </div>
+          </div>
+          <div class="songResult d-none d-lg-block">
+            <div class="container-title">
+              <span class="title-search-page">Brani</span>
+            </div>
+            <div class="songContainer">
+              <div class="number-title-song"> 
+                <span class="num">1</span>
+                <p>title song</p>
+              </div>
+              <div class="songDuration">
+                <p>duration song</p>
+              </div>
+            </div>
+            <div class="songContainer">
+              <div class="number-title-song"> 
+                <span class="num">2</span>
+                <p>title song</p>
+              </div>
+              <div class="songDuration">
+                <p>duration song</p>
+              </div>
+            </div>
+            <div class="songContainer">
+              <div class="number-title-song"> 
+                <span class="num">3</span>
+                <p>title song</p>
+              </div>
+              <div class="songDuration">
+                <p>duration song</p>
+              </div>
+            </div>
+            <div class="songContainer">
+              <div class="number-title-song"> 
+                <span class="num">4</span>
+                <p>title song</p>
+              </div>
+              <div class="songDuration">
+                <p>duration song</p>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
         
         

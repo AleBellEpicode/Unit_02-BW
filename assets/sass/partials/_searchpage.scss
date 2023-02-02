@@ -1,3 +1,4 @@
+
 #searchBar{
     color: rgb(0, 0, 0);
     max-width: 800px;
@@ -9,6 +10,13 @@
     text-overflow: ellipsis;
     text-transform: none;
     border: none;
+}
+.searchBarContainer{
+    @media screen and (max-width: 767px) {
+        position: relative;
+        left: -30px;
+        width: 100%;
+    }
 }
 .sus{
     margin-top: 12px;
@@ -63,6 +71,8 @@
         padding: 20px;
         background-color: #181818;
         border-radius: 5px;
+        width: 30vw;
+        
         .img-artist-container{
             width: 100px;
             height: 100px;
@@ -90,8 +100,39 @@
         }
         
     }
+    .cardArtist{
+        @media screen and (max-width: 992px) {
+            width: 85vw;
+        }
+    }
     .cardArtist:hover{
         background-color: #282828;
+    }
+    .songResult{
+        margin-left: 20px;
+        .songContainer{
+            width: 32vw;
+            padding: 0 16px;
+            height: 50px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            background-color: hsla(0,0%,100%,.1);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            
+            .number-title-song{
+                display: flex;
+                .num{
+                    margin-right: 15px;
+                }
+            }
+        }
+        .songContainer:hover{
+            background-color: #282828;
+        }
     }
     
 }
