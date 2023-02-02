@@ -10,7 +10,7 @@ window.onload = async () => {
       albumTitle.innerHTML = data.title
       //artista album
       let artistName = document.querySelector("#artist-name")
-      artistName.innerHTML = `<a href="artistpage.html?artistID=${data.artist.id}">${data.artist.name}</a>`
+      artistName.innerHTML = `<a href="artistpage.html?artistId=${data.artist.id}">${data.artist.name}</a>`
       //immagine album
       let albumImg = document.querySelector("#album-cover")
       albumImg.src = data.cover_big
@@ -65,7 +65,7 @@ const renderTrackList = (track, i) => {
             <span class="align-self-center me-4" song-id="${track.id}" onclick=setPlayer(event)>${i}</span>
             <div id="track-name" class="d-flex flex-column">
               ${track.title_short}
-              <p id="track-artist" class="mt-3 text-secondary"><a href="artistpage.html?artistID=${track.artist.id}">${track.artist.name}</a></p>
+              <p id="track-artist" class="mt-3 text-secondary"><a href="artistpage.html?artistId=${track.artist.id}">${track.artist.name}</a></p>
             </div>
           </div>
           <div class="col col-3 flex-fill justify-content-end d-none d-md-flex">

@@ -1,3 +1,7 @@
+.artist-main{
+    background: $bg-black-gradient;
+}
+
 #img{
     background-image:url("/assets/img/ab67618600001016d0800cc68aa7528b5ac0aba3.jpeg");
     background-size: cover;
@@ -5,7 +9,7 @@
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: space-between;
     .hero-section{
         padding: 0 32px 24px 32px;
         .verifield{
@@ -90,12 +94,19 @@
    
 }
 .usciteContainer{
+    margin-bottom: 50px;
     @media screen and (min-width: 1024px){
         padding: 0 32px;
     }
-    .uscite{
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 20px;
+    
+}
+.uscite{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-left: 12px;
+    margin-top: 15px;
+    @media screen and (min-width: 1024px){
+        padding: 0 32px;
     }
 }

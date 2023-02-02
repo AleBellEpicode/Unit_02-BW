@@ -15,6 +15,7 @@ main {
 } */
 #home-main {
   align-items: center;
+  background: $bg-black-gradient;
 }
 a {
   text-decoration: none;
@@ -147,7 +148,10 @@ p > a {
 }
 .bi-play-circle-fill::before {
   background-color: #000;
-  border-radius: 50px;
+  border-radius: 50%;
+}
+.bi-play-circle-fill::before:hover {
+  box-shadow: 2px 2px 15px black;
 }
 .playing-card:hover {
   background-color: $bg-hover;

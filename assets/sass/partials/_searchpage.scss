@@ -1,0 +1,97 @@
+#searchBar{
+    color: rgb(0, 0, 0);
+    max-width: 800px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    border-radius: 500px;
+    height: 40px;
+    padding: 6px 48px;
+    text-overflow: ellipsis;
+    text-transform: none;
+    border: none;
+}
+.sus{
+    margin-top: 12px;
+    margin-bottom: 24px;
+    .searchIcon{
+        position: relative;
+        color: black;
+        font-size: 25px;
+        top: 6px;
+        left: 40px;
+    }
+}
+.search-btn-Container{
+    display: flex;
+    .searchButton{
+        border-radius: 500px;
+        background-color: black;
+        border: none;
+        height: 30px;
+        width: 65px;
+        margin-right: 10px;
+        span{
+            line-height: 20px;
+            text-align: center;
+            color: white;
+        }
+    }
+    .searchButton:active{
+        background-color: white;
+        color: black;
+    }
+    .searchButton:hover{
+        background-color: rgba(0, 0, 0, 0.571);
+        color: black;
+    }
+}
+.result-section{
+    display: flex;
+
+    margin-top: 15px;
+    .container-title{
+        display: flex;
+        margin-bottom: 16px;
+        .title-search-page{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+    .cardArtist{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #181818;
+        border-radius: 5px;
+        .img-artist-container{
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 8px 24px rgba(0,0,0,.5);
+        }
+        .nameArtist{
+            line-height: 2;
+            font-size: 2rem;
+            font-weight: 700;
+            padding-bottom: 4px;
+        }
+        .tagArtist{
+            font-size: 1rem;
+            font-weight: 400;
+            background-color: rgba(0,0,0,.2);
+            border-radius: 500px;
+            color: white;
+            display: inline-block;
+            padding: 4px 12px;
+            line-height: 20px;
+            width: 80px;
+            text-align: center;
+        }
+        
+    }
+    .cardArtist:hover{
+        background-color: #282828;
+    }
+    
+}
