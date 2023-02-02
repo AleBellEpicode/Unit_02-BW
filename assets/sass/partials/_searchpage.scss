@@ -69,9 +69,21 @@
         display: flex;
         flex-direction: column;
         padding: 20px;
-        background-color: #181818;
+        background-color: black;
+        position:relative;
+        // background-color: #181818;
         border-radius: 5px;
         width: 30vw;
+        .btn-play-hover{
+            .playSearchCard{
+                right: 4%;
+                top: 74%;  
+                // animation-name: buttonShow;     
+                // animation-duration: 0.5s;     
+                // animation-timing-function: ease-out;
+            }
+           
+        }
         
         .img-artist-container{
             width: 100px;
@@ -102,7 +114,7 @@
     }
     .cardArtist{
         @media screen and (max-width: 992px) {
-            width: 75vw;
+            width: 75vw !important;
         }
     }
     .cardArtist:hover{
