@@ -94,7 +94,7 @@ const renderRelatedAlbums = async (album) => {
               ${releaseYear} &#183; Album
             </p>
           </div>
-        </div><p ></p>`
+        </div>`
 }
 
 const durationFormat = (duration) => {
