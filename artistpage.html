@@ -78,229 +78,83 @@
   <main class="artist-main">
     <div id="img">
       <div class="d-flex justify-content-between mt-4 mb-5 px-3">
-          <div>
-            <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
-              &#60;
-            </button>
-            <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
-              &#62;
-            </button>
-          </div>
-          <span class="rounded-pill account-pill text-white border border-0 dropdown p-2">
-            <a href="#" class="text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" role="button"
-              aria-expanded="false"><img src="" />Nautilus`s Hook ...</a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item text-white" href="#scrollspyHeading1">Account</a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#scrollspyHeading2">Profile</a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#scrollspyHeading3">Settings</a>
-              </li>
-              <li>
-                <a class="dropdown-item text-white" href="#scrollspyHeading4">Log Out</a>
-              </li>
-            </ul>
-          </span>
+        <div>
+          <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
+            &#60;
+          </button>
+          <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
+            &#62;
+          </button>
         </div>
-      <div class="hero-section">
-        <div class="verifield"><i class="bi bi-patch-check-fill"></i>Artista verificato</div>
-        <h1 class="name-artist">Nome Artista</h1>
-        <p class="ascolti">3 ascoltatori mensili</p>
-      </div>
-    </div>
-    <div class="more-buttons">
-      <div class="px-3 d-flex justify-content-start align-items-center gap-4 play-button" id="playlist-buttons">
-        <i class="bi bi-play-circle-fill btn p-0" id="album-playButton"></i>
-        <button class="following">following</button>
-        <span class="dropdown">
-          <a href="#" class="ms-2  text-white text-decoration-none dropdown-toggle playlist-top-buttons" data-bs-toggle="dropdown"
-            role="button" aria-expanded="false">. . .</a>
+        <span class="rounded-pill account-pill text-white border border-0 dropdown p-2">
+          <a href="#" class="text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" role="button"
+            aria-expanded="false"><img src="" />Nautilus`s Hook ...</a>
           <ul class="dropdown-menu">
             <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading5">Add to que</a>
+              <a class="dropdown-item text-white" href="#scrollspyHeading1">Account</a>
             </li>
             <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading6">Download</a>
+              <a class="dropdown-item text-white" href="#scrollspyHeading2">Profile</a>
             </li>
             <li>
-              <a class="dropdown-item text-white" href="#scrollspyHeading7">Add to playlist</a>
+              <a class="dropdown-item text-white" href="#scrollspyHeading3">Settings</a>
+            </li>
+            <li>
+              <a class="dropdown-item text-white" href="#scrollspyHeading4">Log Out</a>
             </li>
           </ul>
         </span>
       </div>
-    </div>
-    <div class="container mt-2" id="popolari-tracklist-container">
-      <!-- <div class="popolari">
-        <span>Popolari</span>
-      </div>
-      <div class="row row-cols-3" id="album-legend">
-        <div class="col col-5 d-flex lh-lg">
-          <span class="align-self-center me-3 text-secondary">#</span>
-          <div class="d-flex flex-column text-secondary">Titolo</div>
-        </div>
-        <div class="col col-3 flex-fill justify-content-end d-none d-md-flex">
-          <p class="text-secondary">Riproduzioni</p>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p class="text-secondary">track-lenght-icon</p>
-        </div>
-      </div> -->
-      <!-- inizio album track-list -->
-      <div class="row row-cols-3 mt-2" id="songContainer">
-        <div class="col col-5 d-flex">
-          <span class="me-4" id="number">1</span>
-          <span id="play">
-            <i class="bi bi-play-fill"></i>
-          </span>
-          <div id="track-name" class="d-flex flex-column">
-            trackName
-          </div>
-        </div>
-        <div class="col col-3 flex-fill justify-content-end d-none d-md-flex">
-          <p id="play-number">Numero riproduzioni</p>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="track-lenght " class="text-secondary">track-lenght</p>
-        </div>
-      </div>
-      <!-- fine prima row  -->
-      <div class="row row-cols-3 mt-2" id="songContainer">
-        <div class="col col-5 d-flex">
-          <span class="me-4 number" >2</span>
-          <span id="play">
-            <i class="bi bi-play-fill"></i>
-          </span>
-          <div id="track-name" class="d-flex flex-column">
-            trackName
-          </div>
-        </div>
-        <div class="col col-3 flex-fill d-none d-md-flex justify-content-end">
-          <p id="play-number">Numero riproduzioni</p>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="track-lenght " class="text-secondary">track-lenght</p>
-        </div>
-      </div>
-      <div class="row row-cols-3 mt-2" id="songContainer">
-        <div class="col col-5 d-flex">
-          <span class="me-4 number" >3</span>
-          <span id="play">
-            <i class="bi bi-play-fill"></i>
-          </span>
-          <div id="track-name" class="d-flex flex-column">
-            trackName
-          </div>
-        </div>
-        <div class="col col-3 flex-fill d-md-flex d-none justify-content-end">
-          <p id="play-number">Numero riproduzioni</p>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="track-lenght " class="text-secondary">track-lenght</p>
-        </div>
-      </div>
-      <div class="row row-cols-3 mt-2 song" id="songContainer">
-        <div class="col col-5 d-flex">
-          <span class="me-4 number" >4</span>
-          <span id="play">
-            <i class="bi bi-play-fill"></i>
-          </span>
-          <div id="track-name" class="d-flex flex-column">
-            trackName
-          </div>
-        </div>
-        <div class="col col-3 flex-fill d-md-flex d-none justify-content-end">
-          <p id="play-number">Numero riproduzioni</p>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="track-lenght " class="text-secondary">track-lenght</p>
-        </div>
-      </div>
-      <div class="row row-cols-3 mt-2 song" id="songContainer">
-        <div class="col col-5 d-flex">
-          <span class="me-4 number" >5</span>
-          <span id="play">
-            <i class="bi bi-play-fill"></i>
-          </span>
-          <div id="track-name" class="d-flex flex-column">
-            trackName
-          </div>
-        </div>
-        <div class="col col-3 flex-fill d-md-flex  d-none justify-content-end">
-          <p id="play-number">Numero riproduzioni</p>
-        </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
-          <p id="track-lenght " class="text-secondary">track-lenght</p>
-        </div>
+      <div class="hero-section container">
+        <div class="verifield shadowartist"><i class="bi bi-patch-check-fill"></i>Artista verificato</div>
+        <h1 id="artistnameh2" class="display-2 fw-bold shadowartist">Nome Artista</h1>
+        <p class="ascolti shadowartist">3 ascoltatori mensili</p>
       </div>
     </div>
     <!-- sezione 2 -->
-    <div class="uscite"><span>Uscite popolari</span></div>
     <article class="mt-4 container usciteContainer">
-      
-      <div class="row row-cols-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-between">
-        <div class="card col p-3 p-0 playing-card" style="width: 9rem">
-          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
-          <a class="">
-            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
-          </a>
-          <div class="card-body">
-            <h6 class="card-title">Card title</h6>
-            <p class="card-text text-secondary">
-              Some quick example text to build on the card title
-            </p>
+      <div class="more-buttons">
+        <div class="px-3 d-flex justify-content-start align-items-center gap-4 play-button" id="playlist-buttons">
+          <i class="bi bi-play-circle-fill btn p-0" id="album-playButton"></i>
+          <button class="following">following</button>
+          <span class="dropdown">
+            <a href="#" class="ms-2  text-white text-decoration-none dropdown-toggle playlist-top-buttons"
+              data-bs-toggle="dropdown" role="button" aria-expanded="false">. . .</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading5">Add to que</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading6">Download</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="#scrollspyHeading7">Add to playlist</a>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </div>
+      <div class="container mt-2" id="popolari-tracklist-container">
+        <div class="popolari">
+          <h4 class="mb-3">Popolari</h4>
+        </div>
+        <div class="row container row-cols-3" id="album-legend">
+          <div class="col col-5 d-flex lh-lg">
+            <span class="align-self-center me-3 text-secondary">#</span>
+            <div class="d-flex flex-column text-secondary">Titolo</div>
+          </div>
+          <div class="col col-3 flex-fill justify-content-end d-none d-md-flex">
+            <p class="text-secondary">Riproduzioni</p>
+          </div>
+          <div class="col col-3 flex-fill d-flex justify-content-end">
+            <p class="text-secondary"><i class="bi bi-clock"></i></p>
           </div>
         </div>
-        <div class="card col p-3 p-0 playing-card" style="width: 9rem">
-          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
-          <a class="">
-            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
-          </a>
-          <div class="card-body">
-            <h6 class="card-title">Card title</h6>
-            <p class="card-text text-secondary">
-              Some quick example text to build on the card title
-            </p>
-          </div>
-        </div>
-        <div class="card col p-3 p-0 playing-card" style="width: 9rem" id="thirdToGo">
-          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
-          <a class="">
-            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
-          </a>
-          <div class="card-body">
-            <h6 class="card-title">Card title</h6>
-            <p class="card-text text-secondary">
-              Some quick example text to build on the card title
-            </p>
-          </div>
-        </div>
-        <div class="card col p-3 p-0 playing-card" style="width: 9rem" id="secondToGo">
-          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
-          <a class="">
-            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
-          </a>
-          <div class="card-body">
-            <h6 class="card-title">Card title</h6>
-            <p class="card-text text-secondary">
-              Some quick example text to build on the card title
-            </p>
-          </div>
-        </div>
-        <div class="card col p-3 p-0 playing-card" style="width: 9rem" id="firstToGo">
-          <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
-          <a class="">
-            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
-          </a>
-          <div class="card-body">
-            <h6 class="card-title">Card title</h6>
-            <p class="card-text text-secondary">
-              Some quick example text to build on the card title
-            </p>
-          </div>
-        </div>
+        <!-- POPOLATO DINAMICAMENTE TRACKLIST -->
+      </div>
+      <div class="uscite mt-5"><span>Discografia</span></div>
+      <div id="altrialbum" class="row row-cols-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-between">
+        <!-- POPOLATO DINAMICAMENTE TRACKLIST -->
       </div>
       </div>
     </article>
