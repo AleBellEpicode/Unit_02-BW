@@ -112,6 +112,7 @@ p > a {
   min-width: 135px;
   max-width: 32%;
   border-radius: 0px;
+  background-color: #2c2b2b;
   /*     @media screen and(max-width:1273px) {
     width: 47%;
     max-width: unset;
@@ -153,6 +154,29 @@ p > a {
 .bi-play-circle-fill::before:hover {
   box-shadow: 2px 2px 15px black;
 }
+/* @keyframes buttonSpawn {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+} */
+.playing-card {
+  @media screen and(max-width: 767px) {
+    width: 13rem !important;
+  }
+}
+@keyframes buttonShow {
+  0% {
+    transform: translateY(10px);
+    opacity: 25%;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
 .playing-card:hover {
   background-color: $bg-hover;
   cursor: pointer;
@@ -163,6 +187,9 @@ p > a {
     font-size: 39px;
     right: 0%;
     top: 12%;
+    animation-name: buttonShow;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
   }
   .suggestedPlaylist-playButton {
     visibility: visible;
@@ -171,6 +198,9 @@ p > a {
     font-size: 46px;
     right: 11%;
     top: 40%;
+    animation-name: buttonShow;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
   }
 }
 *::-webkit-scrollbar {
@@ -196,11 +226,7 @@ p > a {
     display: none;
   }
 } */
-.playing-card {
-  @media screen and(max-width: 767px) {
-    width: 13rem !important;
-  }
-}
+
 #suggested-playlist {
   @media screen and (max-width: 1460px) {
     overflow-x: scroll;
