@@ -45,7 +45,7 @@ const otherAlbums = async (artist) => {
    try {
       let res = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`)
       let { data: songs } = await res.json()
-      let artistOther = document.querySelector('#otherAlbums > h2')
+      let artistOther = document.querySelector('#otherAboutHim')
       artistOther.innerHTML += songs[0].artist.name
       songs.length < 4 ? limitAlbums = songs.length : limitAlbums = 4
       for (let i = 0; i < limitAlbums; i++) {
@@ -77,9 +77,24 @@ const renderTrackList = (track, i) => {
       </div>`
 }
 
-const renderRelatedAlbums = (album) => {
-   let artistOther = document.querySelector('#otherAlbums')
-   artistOther.innerHTML += `<p album-id="${album.id}">${album.title}</p>`
+const renderRelatedAlbums = async (album) => {
+   let artistOther = document.querySelector('#suggested-playlist')
+   let resAlbum = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${album.id}`)
+   let fetchedAlbum = await resAlbum.json()
+   let releaseYear = (new Date(fetchedAlbum.release_date)).getFullYear()
+   artistOther.innerHTML += `
+           <div class="card col p-3 p-0 playing-card" style="width: 11rem" album-id="${album.id}" onclick="location.href='albumpage.html?albumId=${album.id}';">
+          <img src="${album.cover_big}" class="card-img-top position-relative" alt="...">
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute" album-id="${album.id}" onclick="setPlayer(event)"></i>
+          </a>
+          <div class="card-body">
+            <h6 class="card-title">${album.title}</h6>
+            <p class="card-text text-secondary">
+              ${releaseYear} &#183; Album
+            </p>
+          </div>
+        </div><p ></p>`
 }
 
 const durationFormat = (duration) => {
