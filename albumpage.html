@@ -13,8 +13,7 @@
 </head>
 
 <body class="d-flex">
-
-  <navbar class="d-none d-lg-block">
+  <navbar class="d-none d-md-block">
     <div class="logo">
       <svg viewBox="0 0 1134 340" class="spotylogo">
         <title>Spotify</title>
@@ -25,13 +24,13 @@
     </div>
     <ul>
       <li>
-        <a href="#">
+        <a href="index.html">
           <i class="bi bi-house-door-fill"></i>
           <span>Home</span>
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="searchpage.html">
           <i class="bi bi-search"></i>
           <span>Cerca</span>
         </a>
@@ -45,7 +44,7 @@
     </ul>
     <div class="playlist">
       <div id="playlist-input">
-        <input type="text" id="playlist-name-input">
+        <input type="text" id="playlist-name-input" />
         <button id="submit-playlist-btn">Crea</button>
       </div>
       <ul>
@@ -67,12 +66,24 @@
 
     <div class="links">
       <ul>
-        <li><a href="#"><span>Informazioni legali</span></a></li>
-        <li><a href="#"><span>Centro sulla privacy</span></a></li>
-        <li><a href="#"><span>Informativa sulla privacy</span></a></li>
-        <li><a href="#"><span>Impostazioni cookie</span></a></li>
-        <li><a href="#"><span>Info annunci</span></a></li>
-        <li><a href="#"><span>Politica sui cookie</span></a></li>
+        <li>
+          <a href="#"><span>Informazioni legali</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Centro sulla privacy</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Informativa sulla privacy</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Impostazioni cookie</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Info annunci</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Politica sui cookie</span></a>
+        </li>
       </ul>
     </div>
   </navbar>
@@ -167,19 +178,20 @@
         </div>
 
         <!-- CONTENUTO TRACKLIST INSERITO DINAMICAMENTE -->
-
       </div>
-      <h5 class="mt-5 mb-3" id="otherAboutHim">Altro di </h5>
-      <div class="row row-cols-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-between mx-0 gap-2"
-        id="suggested-playlist">
-        <!-- ALBUM AGGIUNTI DINAMICAMENTE -->
+      <h5 class="mt-5 mb-3" id="otherAboutHim">Altro di</h5>
+      <div class="mt-4 container mx-0 px-0">
+        <div class="row row-cols-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-between mx-0 gap-2"
+          id="suggested-playlist">
+          <!-- ALBUM AGGIUNTI DINAMICAMENTE -->
+        </div>
       </div>
-    </div>
   </main>
   <aside id="friendsList" class="d-flex flex-column d-none d-xl-block">
     <div class="d-flex justify-content-between align-items-center">
       <h5>Attività Amici</h5>
-      <div><i class="bi bi-person-plus" onclick="alert('Non hai amici, fattene una ragione!')"></i>
+      <div>
+        <i class="bi bi-person-plus" onclick="alert('Non hai amici, fattene una ragione!')"></i>
         <i class="bi bi-x" onclick="hideSection(event, 3)"></i>
       </div>
     </div>
@@ -290,7 +302,7 @@
     </div>
   </footer>
   <!-- navbar mobile -->
-  <div class="container-fluid d-flex d-sm-none" id="navbar-mobile">
+  <div class="container-fluid d-flex d-md-none" id="navbar-mobile">
     <div class="button-navbar-mobile">
       <i class="bi bi-house-door-fill"></i>
       <span>Home</span>
@@ -304,8 +316,6 @@
       <span>La tua libreria</span>
     </div>
   </div>
-
-
 
   <script src="./assets/script/index.js"></script>
   <script src="./assets/script/playlist.js"></script>
