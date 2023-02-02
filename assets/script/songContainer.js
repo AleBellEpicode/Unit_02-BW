@@ -1,5 +1,5 @@
 const songContainer = document.getElementById("songContainer")
-const numberSong= document.getElementsByClassName("number")
+const numberSong= document.getElementById("number")
 const buttonPlay = document.getElementById("play")
 
 songContainer.addEventListener("mouseover", function() {

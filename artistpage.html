@@ -75,9 +75,9 @@
       </ul>
     </div>
   </navbar>
-  <main>
+  <main class="artist-main">
     <div id="img">
-      <!-- <div class="d-flex justify-content-between mt-4 mb-5 sos">
+      <div class="d-flex justify-content-between mt-4 mb-5 px-3">
           <div>
             <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
               &#60;
@@ -104,7 +104,7 @@
               </li>
             </ul>
           </span>
-        </div> -->
+        </div>
       <div class="hero-section">
         <div class="verifield"><i class="bi bi-patch-check-fill"></i>Artista verificato</div>
         <h1 class="name-artist">Nome Artista</h1>
@@ -132,12 +132,11 @@
         </span>
       </div>
     </div>
-   
     <div class="container mt-2" id="popolari-tracklist-container">
-      <div class="popolari">
+      <!-- <div class="popolari">
         <span>Popolari</span>
       </div>
-      <!-- <div class="row row-cols-3" id="album-legend">
+      <div class="row row-cols-3" id="album-legend">
         <div class="col col-5 d-flex lh-lg">
           <span class="align-self-center me-3 text-secondary">#</span>
           <div class="d-flex flex-column text-secondary">Titolo</div>
@@ -152,7 +151,7 @@
       <!-- inizio album track-list -->
       <div class="row row-cols-3 mt-2" id="songContainer">
         <div class="col col-5 d-flex">
-          <span class=" number me-4">1</span>
+          <span class="me-4" id="number">1</span>
           <span id="play">
             <i class="bi bi-play-fill"></i>
           </span>
@@ -178,7 +177,7 @@
             trackName
           </div>
         </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
+        <div class="col col-3 flex-fill d-none d-md-flex justify-content-end">
           <p id="play-number">Numero riproduzioni</p>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
@@ -195,7 +194,7 @@
             trackName
           </div>
         </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
+        <div class="col col-3 flex-fill d-md-flex d-none justify-content-end">
           <p id="play-number">Numero riproduzioni</p>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
@@ -212,7 +211,7 @@
             trackName
           </div>
         </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
+        <div class="col col-3 flex-fill d-md-flex d-none justify-content-end">
           <p id="play-number">Numero riproduzioni</p>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
@@ -229,7 +228,7 @@
             trackName
           </div>
         </div>
-        <div class="col col-3 flex-fill d-flex justify-content-end">
+        <div class="col col-3 flex-fill d-md-flex  d-none justify-content-end">
           <p id="play-number">Numero riproduzioni</p>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
@@ -238,8 +237,9 @@
       </div>
     </div>
     <!-- sezione 2 -->
+    <div class="uscite"><span>Uscite popolari</span></div>
     <article class="mt-4 container usciteContainer">
-      <div class="uscite"><span>Uscite popolari</span></div>
+      
       <div class="row row-cols-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-between">
         <div class="card col p-3 p-0 playing-card" style="width: 9rem">
           <img src=" https://placekitten.com/300/300" class="card-img-top position-relative" alt="..." />
@@ -418,6 +418,21 @@
       <!--<i class="bi bi-arrows-angle-expand fs-6 ms-3"></i>-->
     </div>
   </footer>
+  <!-- navbar mobile -->
+  <div class="container-fluid d-flex d-sm-none" id="navbar-mobile">
+    <div class="button-navbar-mobile">
+      <i class="bi bi-house-door-fill"></i>
+      <span>Home</span>
+    </div>
+    <div class="button-navbar-mobile">
+      <i class="bi bi-search"></i>
+      <span>Cerca</span>
+    </div>
+    <div class="button-navbar-mobile">
+      <i class="bi bi-collection"></i>
+      <span>La tua libreria</span>
+    </div>
+  </div>
 
 
   <script src="./assets/script/index.js"></script>
