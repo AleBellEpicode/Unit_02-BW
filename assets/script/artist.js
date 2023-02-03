@@ -76,12 +76,12 @@ const renderRelatedAlbums = async (album) => {
       let releaseYear = (new Date(fetchedAlbum.release_date)).getFullYear()
       let artistOther = document.querySelector('#altrialbum')
       artistOther.innerHTML += `
-   <div class="card col p-3 p-0 playing-card" style="width: 9rem" onclick="location.href='albumpage.html?albumId=${album.id}';">
-          <img src="${album.cover_medium}" class="card-img-top position-relative" alt="...">
-          <a class="" album-id="${album.id}" onclick="setPlayer(event)">
-            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+   <div class="card col p-3 p-0 playing-card" style="width: 9rem">
+          <img src="${album.cover_medium}" class="card-img-top position-relative" alt="..." onclick="location.href='albumpage.html?albumId=${album.id}';">
+          <a class="">
+            <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"  album-id="${album.id}" onclick="setPlayer(event)"></i>
           </a>
-          <div class="card-body">
+          <div class="card-body" onclick="location.href='albumpage.html?albumId=${album.id}';">
             <h6 class="card-title">${album.title}</h6>
             <p class="card-text text-secondary">
               ${releaseYear} &#183; Album
