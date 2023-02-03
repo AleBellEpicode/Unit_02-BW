@@ -55,6 +55,8 @@ const startPlayer = () => {
     seekSlider.value = 0
     audioPlayer.play();
     playState = "play";
+    playIconContainer.classList.remove('bi-play-circle-fill')
+    playIconContainer.classList.add('bi-pause-circle-fill')
     requestAnimationFrame(whilePlaying);
   });
 };
@@ -64,10 +66,14 @@ let playState = "pause";
 playIconContainer.addEventListener("click", () => {
   if (playState === "play") {
     audioPlayer.pause();
+    playIconContainer.classList.add('bi-play-circle-fill')
+    playIconContainer.classList.remove('bi-pause-circle-fill')
     cancelAnimationFrame(animationSlider)
     playState = "pause";
   } else {
     audioPlayer.play();
+    playIconContainer.classList.remove('bi-play-circle-fill')
+    playIconContainer.classList.add('bi-pause-circle-fill')
     requestAnimationFrame(whilePlaying);
     playState = "play";
   }
