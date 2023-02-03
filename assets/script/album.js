@@ -61,8 +61,8 @@ const renderTrackList = (track, i) => {
    let trackLenght = track.duration
    trackList.innerHTML += `
        <div class="row row-cols-3 mt-3 px-1 py-2 rounded">
-          <div class="col col-5 d-flex">
-            <span class="align-self-center me-4"  song-id="${track.id}" onclick="setPlayer(event)">${i}</span>
+          <div class="col col-5 d-flex songcontenitoreperilplay">
+            <span class="align-self-center me-4 numerochediventaplay"  song-id="${track.id}" onclick="setPlayer(event)">${i}</span>
             <div id="track-name" class="d-flex flex-column"  song-id="${track.id}" onclick="setPlayer(event)">
               ${track.title_short}
               <p id="track-artist" class="mt-3 text-secondary"><a href="artistpage.html?artistId=${track.artist.id}">${track.artist.name}</a></p>

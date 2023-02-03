@@ -68,6 +68,20 @@ main {
     &::before {
       content: "\25BA";
       color: #1ed760;
+      margin-right: 0;
+    }
+  }
+}
+.songcontenitoreperilplay {
+  &:hover {
+    .numerochediventaplay {
+      display: none !important;
+    }
+    &::before {
+      content: "\25BA";
+      color: #1ed760;
+      margin-right: 14px;
+      margin-top: 15px;
     }
   }
 }
