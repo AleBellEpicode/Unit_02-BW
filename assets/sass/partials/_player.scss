@@ -89,3 +89,17 @@ footer {
     font-size: 3em;
   }
 }
+
+input[type="range"]::-moz-range-progress {
+  background-color: #ffffff;
+}
+input[type="range"]::-moz-range-track {
+  background-color: #5c5c5c;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #ffffff;
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: #5c5c5c;
+}
