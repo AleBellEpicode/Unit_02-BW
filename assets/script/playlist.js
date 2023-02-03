@@ -16,19 +16,17 @@ submitPlaylistBtn.addEventListener("click", function () {
     drawPlaylists()
 });
 
-window.onload = function () {
-    let retrivePlaylists = localStorage.getItem('archivioplaylist')
-    if (retrivePlaylists) {
-        playlists = JSON.parse(retrivePlaylists)
-    } else {
-        playlists = ['toxic music', 'un nuovo mito', 'techno bunker', 'aria di casaTUA', "l'erba del vicino", 'eastrEggs del dev']
-    }
-    drawPlaylists()
-}
-
 const drawPlaylists = () => {
     playlistNameDisplay.innerHTML = ''
     for (let i = 0; i < playlists.length; i++) {
         playlistNameDisplay.innerHTML += `<div><a>${playlists[i]}</a></div>`
     }
 }
+
+let retrivePlaylists = localStorage.getItem('archivioplaylist')
+if (retrivePlaylists) {
+    playlists = JSON.parse(retrivePlaylists)
+} else {
+    playlists = ['toxic music', 'un nuovo mito', 'techno bunker', 'aria di casaTUA', "l'erba del vicino", 'eastrEggs del dev']
+}
+drawPlaylists()
