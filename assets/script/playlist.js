@@ -19,7 +19,12 @@ submitPlaylistBtn.addEventListener("click", function () {
 const drawPlaylists = () => {
     playlistNameDisplay.innerHTML = ''
     for (let i = 0; i < playlists.length; i++) {
-        playlistNameDisplay.innerHTML += `<div><a>${playlists[i]}</a></div>`
+        if (i === 5) {
+            playlistNameDisplay.innerHTML += `<div><a song-id="132199630" onclick="setPlayer(event)">${playlists[i]}</a></div>`
+
+        } else {
+            playlistNameDisplay.innerHTML += `<div><a>${playlists[i]}</a></div>`
+        }
     }
 }
 

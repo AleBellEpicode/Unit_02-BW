@@ -90,10 +90,12 @@
   <main class="px-3 container" id="nobg-Main">
     <div class="d-flex justify-content-between px-0 align-items-center sus mx-0">
       <div class="d-none d-md-flex">
-        <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
+        <button class="btn-forward_backward text-secondary border border-0 rounded-circle"
+          onclick="window.history.go(-1); return false;">
           &#60;
         </button>
-        <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
+        <button class="btn-forward_backward text-secondary border border-0 rounded-circle"
+          onclick="window.history.go(1); return false;">
           &#62;
         </button>
       </div>
