@@ -46,7 +46,7 @@ const otherAlbums = async (artist) => {
       let res = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${artist}`)
       let { data: songs } = await res.json()
       let artistOther = document.querySelector('#otherAboutHim')
-      artistOther.innerHTML += songs[0].artist.name
+      artistOther.innerHTML += ` ${songs[0].artist.name}`
       songs.length < 4 ? limitAlbums = songs.length : limitAlbums = 4
       for (let i = 0; i < limitAlbums; i++) {
          renderRelatedAlbums(songs[i].album)
@@ -60,10 +60,10 @@ const renderTrackList = (track, i) => {
    let trackList = document.querySelector('#album-tracklist-container');
    let trackLenght = track.duration
    trackList.innerHTML += `
-       <div class="row row-cols-3 mt-5">
+       <div class="row row-cols-3 mt-3 px-1 py-2 rounded">
           <div class="col col-5 d-flex">
-            <span class="align-self-center me-4" song-id="${track.id}" onclick=setPlayer(event)>${i}</span>
-            <div id="track-name" class="d-flex flex-column">
+            <span class="align-self-center me-4"  song-id="${track.id}" onclick="setPlayer(event)">${i}</span>
+            <div id="track-name" class="d-flex flex-column"  song-id="${track.id}" onclick="setPlayer(event)">
               ${track.title_short}
               <p id="track-artist" class="mt-3 text-secondary"><a href="artistpage.html?artistId=${track.artist.id}">${track.artist.name}</a></p>
             </div>
@@ -83,12 +83,12 @@ const renderRelatedAlbums = async (album) => {
    let fetchedAlbum = await resAlbum.json()
    let releaseYear = (new Date(fetchedAlbum.release_date)).getFullYear()
    artistOther.innerHTML += `
-           <div class="card col p-3 p-0 playing-card" style="width: 11rem" album-id="${album.id}" onclick="location.href='albumpage.html?albumId=${album.id}';">
-          <img src="${album.cover_big}" class="card-img-top position-relative" alt="...">
+           <div class="card col p-3 p-0 playing-card" style="width: 11rem" album-id="${album.id}" >
+          <img src="${album.cover_big}" class="card-img-top position-relative" alt="..." onclick="location.href='albumpage.html?albumId=${album.id}';">
           <a class="">
             <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute" album-id="${album.id}" onclick="setPlayer(event)"></i>
           </a>
-          <div class="card-body">
+          <div class="card-body" onclick="location.href='albumpage.html?albumId=${album.id}';">
             <h6 class="card-title">${album.title}</h6>
             <p class="card-text text-secondary">
               ${releaseYear} &#183; Album

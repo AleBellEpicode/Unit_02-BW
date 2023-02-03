@@ -38,9 +38,9 @@ const fetchByQuery = async (query) => {
 };
 
 const renderTracks = (track) => {
-  trackList.innerHTML += `<div class="songContainer container-fluid">
+  trackList.innerHTML += `<div class="songContainer container-fluid" song-id="${track.id}" onclick="setPlayer(event)">
    <div class="number-title-song">
-     <span class="num">1</span>
+     <span class="num">${i}</span>
      <p>${track.title_short} - ${track.artist.name}</p>
    </div>
    <div class="songDuration">
@@ -48,11 +48,10 @@ const renderTracks = (track) => {
    </div>
  </div>`;
 };
-// ${track.id}
 
 const renderArtists = (artist) => {
   artistList.innerHTML += `<div class="img-artist-container">
-   <img src="${artist.picture_big}" alt="" class="w-100 rounded-circle">
+   <img src="${artist.picture_big}" alt="" class="w-100 rounded-circle" onclick="location.href='artistpage.html?artistId=${artist.id}';>
  </div>
  <div>
    <p class="nameArtist">${artist.name}</p>
@@ -89,11 +88,11 @@ const durationFormat = (duration) => {
 
 const renderAlbums = (album, artist) => {
   albumsList.innerHTML += `<div class="card col p-3 p-0 playing-card" style="width: 11rem" album-id="${album.id}">
-   <img src=" ${album.cover_big}" class="card-img-top position-relative" alt="..." />
+   <img src=" ${album.cover_big}" class="card-img-top position-relative" alt="..." onclick="location.href='albumpage.html?albumId=${album.id}';" />
    <a class="">
-     <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"></i>
+     <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute" album-id="${album.id}" onclick="setPlayer(event)"></i>
    </a>
-   <div class="card-body">
+   <div class="card-body" onclick="location.href='albumpage.html?albumId=${album.id}';">
      <h6 class="card-title">${album.title}</h6>
      <p class="card-text text-secondary">
      ${artist.name}
