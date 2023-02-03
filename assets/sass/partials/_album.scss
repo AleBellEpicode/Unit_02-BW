@@ -36,3 +36,9 @@ main {
     }
   }
 }
+
+#album-tracklist-container {
+  > div:not(:first-of-type):hover {
+    background-color: #373535;
+  }
+}
