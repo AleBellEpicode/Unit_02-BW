@@ -61,7 +61,7 @@ const renderTrackList = (track, i) => {
           </div>
         </div>
         <div class="col col-3 flex-fill justify-content-end d-none d-md-flex">
-          <p id="play-number">${track.rank.toLocaleString('en-US')}</p>
+          <p id="play-number" class="text-secondary">${track.rank.toLocaleString('en-US')}</p>
         </div>
         <div class="col col-3 flex-fill d-flex justify-content-end">
           <p id="track-lenght " class="text-secondary">${songDuration}</p>
@@ -76,9 +76,9 @@ const renderRelatedAlbums = async (album) => {
       let releaseYear = (new Date(fetchedAlbum.release_date)).getFullYear()
       let artistOther = document.querySelector('#altrialbum')
       artistOther.innerHTML += `
-   <div class="card col p-3 p-0 playing-card" style="width: 9rem">
+   <div class="card col p-3 p-0 playing-card">
+   <a class="">
           <img src="${album.cover_medium}" class="card-img-top position-relative" alt="..." onclick="location.href='albumpage.html?albumId=${album.id}';">
-          <a class="">
             <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute"  album-id="${album.id}" onclick="setPlayer(event)"></i>
           </a>
           <div class="card-body" onclick="location.href='albumpage.html?albumId=${album.id}';">

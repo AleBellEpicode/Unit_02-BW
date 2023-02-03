@@ -130,9 +130,9 @@
     <!-- sezione 2 -->
     <article class="mt-4 container usciteContainer">
       <div class="more-buttons">
-        <div class="px-3 d-flex justify-content-start align-items-center gap-4 play-button" id="playlist-buttons">
+        <div class="d-flex justify-content-start align-items-center gap-4 play-button" id="playlist-buttons">
           <i class="bi bi-play-circle-fill btn p-0" id="album-playButton"></i>
-          <button class="following">following</button>
+          <button class="following">Following</button>
           <span class="dropdown">
             <a href="#" class="ms-2 text-white text-decoration-none dropdown-toggle playlist-top-buttons"
               data-bs-toggle="dropdown" role="button" aria-expanded="false">. . .</a>
@@ -150,10 +150,10 @@
           </span>
         </div>
       </div>
+      <div class="popolari">
+        <h4 class="mb-3 mt-4">Popolari</h4>
+      </div>
       <div class="container mt-2" id="popolari-tracklist-container">
-        <div class="popolari">
-          <h4 class="mb-3">Popolari</h4>
-        </div>
         <div class="row container row-cols-3" id="album-legend">
           <div class="col col-5 d-flex lh-lg">
             <span class="align-self-center me-3 text-secondary">#</span>
@@ -169,6 +169,23 @@
         <!-- POPOLATO DINAMICAMENTE TRACKLIST -->
       </div>
       <div class="uscite mt-5"><span>Discografia</span></div>
+      <div class="search-btn-Container mb-3">
+        <div>
+          <button class="searchButton">
+            <span>Popolari</span>
+          </button>
+        </div>
+        <div>
+          <button class="searchButton">
+            <span>Album</span>
+          </button>
+        </div>
+        <div>
+          <button class="searchButton">
+            <span>Singoli</span>
+          </button>
+        </div>
+      </div>
       <div id="altrialbum" class="row row-cols-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-between">
         <!-- POPOLATO DINAMICAMENTE TRACKLIST -->
       </div>
