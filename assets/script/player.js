@@ -1,6 +1,8 @@
 let audioPlayer = document.querySelector("#audioPlayer");
 let seekSlider = document.querySelector("#sliderCenter");
 let audioContainer = document.querySelector('#divFooterCenter')
+let volumeSlider = document.querySelector('#customRange2');
+
 
 
 const retrieveBySong = async (songid) => {
@@ -34,6 +36,8 @@ const retrieveBySong = async (songid) => {
 };
 
 const setPlayer = async (event) => {
+  volumeSlider.max = 100
+  volumeSlider.value = 70
   if (event.target.attributes["song-id"]) {
     retrieveBySong(event.target.attributes["song-id"].value);
   } else if (event.target.attributes["album-id"]) {
@@ -79,6 +83,10 @@ playIconContainer.addEventListener("click", () => {
   }
 });
 
+volumeSlider.addEventListener('input', (e) => {
+  showRangeProgress(e.target);
+});
+
 const showRangeProgress = (rangeInput) => {
   if (rangeInput === seekSlider) audioContainer.style.setProperty('--seek-before-width', rangeInput.value / rangeInput.max * 100 + '%');
   else audioContainer.style.setProperty('--volume-before-width', rangeInput.value / rangeInput.max * 100 + '%');
@@ -109,4 +117,9 @@ if (audioPlayer.readyState > 0) {
 seekSlider.addEventListener('change', () => {
   audioPlayer.currentTime = seekSlider.value;
   requestAnimationFrame(whilePlaying);
+});
+
+volumeSlider.addEventListener('input', (e) => {
+  const value = e.target.value;
+  audioPlayer.volume = value / 100;
 });
