@@ -1,0 +1,51 @@
+#home-main {
+  #showcase-card {
+    background: linear-gradient(45deg, black, #1e1e1e);
+    h1,
+    div.card-text,
+    p,
+    img {
+      cursor: pointer;
+    }
+  }
+  article.container:nth-of-type(2) {
+    > div {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      > div {
+        background-color: #0e0e0e;
+        transition: background-color 0.5s ease;
+        > a {
+          position: relative;
+        }
+        &:hover {
+          background-color: #424141;
+        }
+        width: 18%;
+        margin-right: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        @media screen and (max-width: 1500px) {
+          width: 30% !important;
+        }
+        @media screen and (max-width: 480px) {
+          width: 60% !important;
+        }
+        @media screen and (max-width: 1500px) {
+          h6,
+          p {
+            font-size: 0.8em;
+          }
+        }
+        @media screen and (max-width: 1200px) {
+          h6,
+          p {
+            font-size: 0.7em;
+          }
+        }
+      }
+    }
+  }
+}
