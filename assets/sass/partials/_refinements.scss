@@ -16,11 +16,11 @@
       > div {
         background-color: #0e0e0e;
         transition: background-color 0.5s ease;
-        > a {
-          position: relative;
-        }
         &:hover {
           background-color: #424141;
+        }
+        > a {
+          position: relative;
         }
         width: 18%;
         margin-right: 10px;

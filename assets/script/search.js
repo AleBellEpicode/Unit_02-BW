@@ -51,13 +51,13 @@ const renderTracks = (track, i) => {
 
 const renderArtists = (artist) => {
   artistList.innerHTML += `<div class="img-artist-container">
-   <img src="${artist.picture_big}" alt="" class="w-100 rounded-circle" onclick="location.href='artistpage.html?artistId=${artist.id}';>
+   <img src="${artist.picture_big}" alt="" class="w-100 rounded-circle" onclick="location.href='artistpage.html?artistId=${artist.id}';">
  </div>
  <div>
    <p class="nameArtist">${artist.name}</p>
  </div>
  <div>
-   <span class="tagArtist">${artist.id}</span>
+   <span class="tagArtist">Artista</span>
  </div>
  <div class="btn-play-hover">
    <a class="">
@@ -87,7 +87,7 @@ const durationFormat = (duration) => {
 };
 
 const renderAlbums = (album, artist) => {
-  albumsList.innerHTML += `<div class="card col p-3 p-0 playing-card" style="width: 11rem" album-id="${album.id}">
+  albumsList.innerHTML += `<div class="card col p-3 p-0 playing-card" album-id="${album.id}">
    <img src=" ${album.cover_big}" class="card-img-top position-relative" alt="..." onclick="location.href='albumpage.html?albumId=${album.id}';" />
    <a class="">
      <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute" album-id="${album.id}" onclick="setPlayer(event)"></i>
