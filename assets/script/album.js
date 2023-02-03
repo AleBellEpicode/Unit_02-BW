@@ -83,9 +83,9 @@ const renderRelatedAlbums = async (album) => {
    let fetchedAlbum = await resAlbum.json()
    let releaseYear = (new Date(fetchedAlbum.release_date)).getFullYear()
    artistOther.innerHTML += `
-           <div class="card col p-3 p-0 playing-card" style="width: 11rem" album-id="${album.id}" >
+           <div class="card col p-3 p-0 playing-card" album-id="${album.id}" >
+           <a class="">
           <img src="${album.cover_big}" class="card-img-top position-relative" alt="..." onclick="location.href='albumpage.html?albumId=${album.id}';">
-          <a class="">
             <i class="bi bi-play-circle-fill suggestedPlaylist-playButton position-absolute" album-id="${album.id}" onclick="setPlayer(event)"></i>
           </a>
           <div class="card-body" onclick="location.href='albumpage.html?albumId=${album.id}';">

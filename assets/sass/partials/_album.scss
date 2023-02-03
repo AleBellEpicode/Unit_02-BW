@@ -2,7 +2,7 @@ $bg-album-gradient: linear-gradient(
   0deg,
   rgba(0, 0, 0, 1) 0%,
   rgba(33, 33, 33, 1) 42%,
-  rgba(182, 175, 23, 1) 100%
+  rgb(61, 162, 230) 100%
 );
 #showcase-card {
   background: none;
@@ -41,5 +41,36 @@ main {
   > div:not(:first-of-type):hover {
     background-color: #373535;
     box-shadow: 2px 2px 10px rgba(19, 19, 19, 0.425);
+  }
+}
+
+div#suggested-playlist {
+  > div {
+    width: 18%;
+    margin-right: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    > a {
+      position: relative;
+    }
+    @media screen and (max-width: 1500px) {
+      width: 30% !important;
+    }
+    @media screen and (max-width: 480px) {
+      width: 60% !important;
+    }
+    @media screen and (max-width: 1500px) {
+      h6,
+      p {
+        font-size: 0.8em;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      h6,
+      p {
+        font-size: 0.7em;
+      }
+    }
   }
 }
