@@ -49,8 +49,10 @@
     }
   }
 }
-article > div > #suggested-playlist > .card-body {
-  width: 100% !important;
-  flex-direction: column;
-  overflow-x: none;
+article > div > #suggested-playlist {
+  overflow: hidden !important;
+  > .card-body {
+    width: 100% !important;
+    flex-direction: column;
+  }
 }
