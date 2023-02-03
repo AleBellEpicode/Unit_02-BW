@@ -1,4 +1,7 @@
 let audioPlayer = document.querySelector("#audioPlayer");
+let seekSlider = document.querySelector("#sliderCenter");
+let audioContainer = document.querySelector('#divFooterCenter')
+
 
 const retrieveBySong = async (songid) => {
   try {
@@ -49,8 +52,10 @@ const setPlayer = async (event) => {
 
 const startPlayer = () => {
   audioPlayer.addEventListener("loadedmetadata", () => {
+    seekSlider.value = 0
     audioPlayer.play();
     playState = "play";
+    requestAnimationFrame(whilePlaying);
   });
 };
 
@@ -59,11 +64,43 @@ let playState = "pause";
 playIconContainer.addEventListener("click", () => {
   if (playState === "play") {
     audioPlayer.pause();
-
+    cancelAnimationFrame(animationSlider)
     playState = "pause";
   } else {
     audioPlayer.play();
-
+    requestAnimationFrame(whilePlaying);
     playState = "play";
   }
+});
+
+const showRangeProgress = (rangeInput) => {
+  if (rangeInput === seekSlider) audioContainer.style.setProperty('--seek-before-width', rangeInput.value / rangeInput.max * 100 + '%');
+  else audioContainer.style.setProperty('--volume-before-width', rangeInput.value / rangeInput.max * 100 + '%');
+}
+
+seekSlider.addEventListener('input', (e) => {
+  showRangeProgress(e.target);
+});
+
+const setSliderMax = () => {
+  seekSlider.max = Math.floor(audioPlayer.duration);
+}
+
+const whilePlaying = () => {
+  seekSlider.value = Math.floor(audioPlayer.currentTime);
+  audioContainer.style.setProperty('--seek-before-width', `${seekSlider.value / seekSlider.max * 100}%`);
+  animationSlider = requestAnimationFrame(whilePlaying);
+}
+
+if (audioPlayer.readyState > 0) {
+  setSliderMax();
+} else {
+  audioPlayer.addEventListener('loadedmetadata', () => {
+    setSliderMax();
+  });
+}
+
+seekSlider.addEventListener('change', () => {
+  audioPlayer.currentTime = seekSlider.value;
+  requestAnimationFrame(whilePlaying);
 });
