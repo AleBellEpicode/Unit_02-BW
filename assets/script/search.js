@@ -26,7 +26,7 @@ const fetchByQuery = async (query) => {
     artistList.innerHTML = "";
     albumsList.innerHTML = "";
     for (let i = 0; i < popularNo; i++) {
-      renderTracks(songs[i]);
+      renderTracks(songs[i], i + 1);
       renderAlbums(songs[i].album, songs[i].artist);
     }
     //altri album dell'artista
@@ -37,7 +37,7 @@ const fetchByQuery = async (query) => {
   }
 };
 
-const renderTracks = (track) => {
+const renderTracks = (track, i) => {
   trackList.innerHTML += `<div class="songContainer container-fluid" song-id="${track.id}" onclick="setPlayer(event)">
    <div class="number-title-song">
      <span class="num">${i}</span>

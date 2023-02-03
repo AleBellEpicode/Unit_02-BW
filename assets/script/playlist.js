@@ -18,7 +18,6 @@ submitPlaylistBtn.addEventListener("click", function () {
 
 window.onload = function () {
     let retrivePlaylists = localStorage.getItem('archivioplaylist')
-    console.log(retrivePlaylists)
     if (retrivePlaylists) {
         playlists = JSON.parse(retrivePlaylists)
     } else {
