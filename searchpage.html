@@ -12,8 +12,8 @@
   <title>Spotify Clone</title>
 </head>
 
-<body class="d-flex">
-  <navbar class="d-none d-md-block ">
+<body class="d-flex" id="searchPage-Body">
+  <navbar class="d-none d-md-block">
     <div class="logo">
       <svg viewBox="0 0 1134 340" class="spotylogo">
         <title>Spotify</title>
@@ -44,7 +44,7 @@
     </ul>
     <div class="playlist">
       <div id="playlist-input">
-        <input type="text" id="playlist-name-input">
+        <input type="text" id="playlist-name-input" />
         <button id="submit-playlist-btn">Crea</button>
       </div>
       <ul>
@@ -66,17 +66,29 @@
 
     <div class="links">
       <ul>
-        <li><a href="#"><span>Informazioni legali</span></a></li>
-        <li><a href="#"><span>Centro sulla privacy</span></a></li>
-        <li><a href="#"><span>Informativa sulla privacy</span></a></li>
-        <li><a href="#"><span>Impostazioni cookie</span></a></li>
-        <li><a href="#"><span>Info annunci</span></a></li>
-        <li><a href="#"><span>Politica sui cookie</span></a></li>
+        <li>
+          <a href="#"><span>Informazioni legali</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Centro sulla privacy</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Informativa sulla privacy</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Impostazioni cookie</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Info annunci</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Politica sui cookie</span></a>
+        </li>
       </ul>
     </div>
   </navbar>
-  <main class="px-3">
-    <div class="d-flex justify-content-between container px-0 align-items-center sus mx-0">
+  <main class="px-3 container" id="nobg-Main">
+    <div class="d-flex justify-content-between px-0 align-items-center sus mx-0">
       <div class="d-none d-md-flex">
         <button class="btn-forward_backward text-secondary border border-0 rounded-circle">
           &#60;
@@ -87,10 +99,10 @@
       </div>
       <div class="searchBarContainer">
         <i class="bi bi-search searchIcon"></i>
-        <input type="text" name="" id="searchBar" placeholder="Cosa vuoi ascoltare?">
+        <input type="text" name="" id="searchBar" placeholder="Cosa vuoi ascoltare?" />
       </div>
       <div class="d-none d-md-flex">
-        <span class=" rounded-pill account-pill text-white border border-0 dropdown p-2">
+        <span class="rounded-pill account-pill text-white border border-0 dropdown p-2">
           <a href="#" class="text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" role="button"
             aria-expanded="false"><img src="" />Nautilus`s Hook ...</a>
           <ul class="dropdown-menu">
@@ -127,8 +139,8 @@
         </button>
       </div>
     </div>
-    <div class="result-section">
-      <div class="rilevantResult d-none d-lg-block">
+    <div class="result-section container-fluid justify-content-between px-0 row row-cols-lg-2 flex-nowrap">
+      <div class="rilevantResult d-none d-lg-block col col-6">
         <div class="container-title">
           <span class="title-search-page">Risultato più rilevante</span>
         </div>
@@ -149,28 +161,26 @@
           </div> -->
         </div>
       </div>
-      <div class="songResult">
+      <div class="songResult col ms-2 col-12 col-lg-6">
         <div class="container-title">
           <span class="title-search-page">Brani</span>
         </div>
-        <div class="brani" id="tracks">
-        </div>
+        <div class="brani" id="tracks"></div>
       </div>
     </div>
-    <div class="resultAlbum ">
+    <div class="resultAlbum">
       <div class="container-title">
         <span class="title-search-page">Album</span>
       </div>
       <div class="row row-cols-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 justify-content-between mx-0 gap-2"
-        id="suggested-playlist">
-      </div>
+        id="suggested-playlist"></div>
     </div>
-
   </main>
   <aside id="friendsList" class="d-flex flex-column d-none d-xl-block">
     <div class="d-flex justify-content-between align-items-center">
       <h5>Attività Amici</h5>
-      <div><i class="bi bi-person-plus" onclick="alert('Non hai amici, fattene una ragione!')"></i>
+      <div>
+        <i class="bi bi-person-plus" onclick="alert('Non hai amici, fattene una ragione!')"></i>
         <i class="bi bi-x" onclick="hideSection(event, 3)"></i>
       </div>
     </div>
@@ -235,8 +245,8 @@
     <div id="divFooterLeft" class="d-flex align-items-center col-3 d-none d-md-flex">
       <div id="coverContainer"></div>
       <div id="songInfoFooter" class="ms-2">
-        <p id="songTitleFooter" class="mb-1"> </p>
-        <p> </p>
+        <p id="songTitleFooter" class="mb-1"></p>
+        <p></p>
       </div>
       <i class="bi bi-heart fs-6 ms-3 iconsFooter"></i>
       <i class="bi bi-pip fs-6 ms-3 iconsFooter"></i>
@@ -295,7 +305,6 @@
       <span>La tua libreria</span>
     </div>
   </div>
-
 
   <script src="./assets/script/index.js"></script>
   <script src="./assets/script/playlist.js"></script>
