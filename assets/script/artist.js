@@ -108,7 +108,11 @@ const durationFormat = (duration) => {
    }
    if (hrs <= 0) {
       ret += "" + mins + ":";
-      ret += "" + secs;
+      if (secs < 10) {
+         ret += "0" + secs;
+      } else {
+         ret += "" + secs;
+      }
    }
 
 

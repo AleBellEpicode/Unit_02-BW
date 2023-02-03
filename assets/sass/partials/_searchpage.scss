@@ -1,4 +1,6 @@
-
+.rilevantResult{
+    margin-right: 20px;
+}
 #searchBar{
     color: rgb(0, 0, 0);
     max-width: 800px;
@@ -112,16 +114,13 @@
         }
         
     }
-    .cardArtist{
-        @media screen and (max-width: 992px) {
-            width: 75vw !important;
-        }
-    }
+    
     .cardArtist:hover{
         background-color: #282828;
     }
     .songResult{
-        margin-left: 20px;
+        
+        margin-right: 20px;
         .songContainer{
             width: 32vw;
             padding: 0 16px;
@@ -144,6 +143,17 @@
         }
         .songContainer:hover{
             background-color: #282828;
+        }
+        .songContainer{
+            @media screen and (max-width: 992px) {
+                width: 65vw;
+            }
+            @media screen and (max-width: 767px) {
+                width: 90vw;
+            }
+        }
+        .brani{
+            margin-right: 16px;
         }
     }
     
