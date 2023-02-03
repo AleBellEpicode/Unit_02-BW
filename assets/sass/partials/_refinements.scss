@@ -59,3 +59,15 @@ article > div > #suggested-playlist {
 main {
   overflow-x: hidden;
 }
+
+#songContainer {
+  &:hover {
+    .numerochediventaplay {
+      display: none !important;
+    }
+    &::before {
+      content: "\25BA";
+      color: #1ed760;
+    }
+  }
+}

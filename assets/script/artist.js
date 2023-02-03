@@ -52,7 +52,7 @@ const renderTrackList = (track, i) => {
    trackList.innerHTML += `
    <div class="row row-cols-3 mt-2" id="songContainer" song-id="${track.id}" onclick="setPlayer(event)">
         <div class="col col-5 d-flex">
-          <span class="me-4" id="number" style="display: inline-block;">${i}</span>
+          <span class="me-4 numerochediventaplay" id="number" style="display: inline-block;">${i}</span>
           <span id="play" style="display: none;">
             <i class="bi bi-play-fill"></i>
           </span>
